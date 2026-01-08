@@ -4,6 +4,13 @@ import { FullWidthMap } from "@/components/sections/FullWidthMap"
 import Link from "next/link"
 import { ChevronRight, Home } from "lucide-react"
 
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Contact Us | SGO Construction",
+    description: "Get in touch with SGO Construction for your home remodeling needs. Request a consultation or estimate today.",
+}
+
 export default function ContactPage() {
     return (
         <main>

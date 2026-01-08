@@ -23,11 +23,39 @@ export function BookingForm({ className }: { className?: string }) {
         e.preventDefault()
         setIsLoading(true)
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500))
+        // Gather form data
+        const formData = new FormData(e.currentTarget)
+        const data = {
+            name: formData.get("name"),
+            phone: formData.get("phone"),
+            email: formData.get("email"),
+            service: formData.get("service") || "not-specified",
+            message: formData.get("message"),
+        }
 
-        setIsLoading(false)
-        setIsSuccess(true)
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            })
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                console.error("API Error:", result);
+                throw new Error(result.details || "Failed to send message");
+            }
+
+            setIsSuccess(true)
+        } catch (error) {
+            console.error("Error submitting form:", error)
+            alert("Something went wrong. Please try again.")
+        } finally {
+            setIsLoading(false)
+        }
     }
 
     if (isSuccess) {
@@ -58,11 +86,13 @@ export function BookingForm({ className }: { className?: string }) {
 
     return (
         <form onSubmit={handleSubmit} className={`space-y-6 ${className}`}>
+            {/* Form Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-semibold text-foreground">Full Name</label>
                     <Input
                         id="name"
+                        name="name"
                         required
                         placeholder="John Doe"
                         className="bg-white border-gray-300 text-foreground placeholder:text-gray-400 focus:border-primary focus:ring-primary h-12"
@@ -72,6 +102,7 @@ export function BookingForm({ className }: { className?: string }) {
                     <label htmlFor="phone" className="text-sm font-semibold text-foreground">Phone Number</label>
                     <Input
                         id="phone"
+                        name="phone"
                         required
                         type="tel"
                         placeholder="(555) 123-4567"
@@ -84,6 +115,7 @@ export function BookingForm({ className }: { className?: string }) {
                 <label htmlFor="email" className="text-sm font-semibold text-foreground">Email Address</label>
                 <Input
                     id="email"
+                    name="email"
                     required
                     type="email"
                     placeholder="john@example.com"
@@ -93,7 +125,7 @@ export function BookingForm({ className }: { className?: string }) {
 
             <div className="space-y-2">
                 <label className="text-sm font-semibold text-foreground">Service Interested In</label>
-                <Select required>
+                <Select required name="service">
                     <SelectTrigger className="h-12 bg-white border-gray-300">
                         <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
@@ -112,6 +144,7 @@ export function BookingForm({ className }: { className?: string }) {
                 <label htmlFor="message" className="text-sm font-semibold text-foreground">Project Details</label>
                 <Textarea
                     id="message"
+                    name="message"
                     required
                     placeholder="Tell us about your project goals, timeline, and any specific requirements..."
                     className="bg-white border-gray-300 text-foreground placeholder:text-gray-400 focus:border-primary focus:ring-primary min-h-[120px] resize-none"

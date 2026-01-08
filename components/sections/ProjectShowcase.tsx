@@ -19,7 +19,7 @@ const projects = [
         id: 2,
         title: "Modern Bathroom Spa",
         location: "Raynham, MA",
-        image: "/bathroom.png",
+        image: "/banheiro.jpeg",
         category: "Bath",
         year: "2024"
     },
@@ -117,9 +117,9 @@ export function ProjectShowcase() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
                         viewport={{ amount: 0.6, margin: "0px" }}
-                        className="min-w-[90vw] md:min-w-[800px] lg:min-w-[900px] snap-center"
+                        className="min-w-[85vw] md:min-w-[600px] lg:min-w-[700px] snap-center"
                     >
-                        <div className="group relative h-[500px] md:h-[650px] rounded-[2.5rem] overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <div className="group relative h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
                             <Image
                                 src={project.image}
                                 alt={project.title}
@@ -131,26 +131,26 @@ export function ProjectShowcase() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
                             {/* Top Badge */}
-                            <div className="absolute top-8 right-8 z-10">
-                                <span className="px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs font-bold uppercase tracking-wider rounded-full">
+                            <div className="absolute top-6 right-6 z-10">
+                                <span className="px-3 py-1.5 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] md:text-xs font-bold uppercase tracking-wider rounded-full">
                                     {project.category}
                                 </span>
                             </div>
 
                             {/* Bottom Content */}
-                            <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <div className="flex items-center gap-3 text-gray-300 text-sm font-medium mb-3 uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div className="flex items-center gap-3 text-gray-300 text-xs md:text-sm font-medium mb-2 uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                                     <span>{project.location}</span>
                                     <span className="w-1 h-1 bg-white rounded-full" />
                                     <span>{project.year}</span>
                                 </div>
 
-                                <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                                <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">
                                     {project.title}
                                 </h3>
 
-                                <div className="inline-flex items-center gap-3 text-white font-bold border-b border-white/30 pb-1 group-hover:border-white transition-colors">
-                                    View Details <ArrowUpRight className="w-5 h-5" />
+                                <div className="inline-flex items-center gap-2 text-white text-sm font-bold border-b border-white/30 pb-0.5 group-hover:border-white transition-colors">
+                                    View Details <ArrowUpRight className="w-4 h-4" />
                                 </div>
                             </div>
                         </div>
@@ -163,13 +163,13 @@ export function ProjectShowcase() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ amount: 0.6 }}
-                    className="min-w-[300px] snap-center flex items-center justify-center pr-6"
+                    className="min-w-[250px] snap-center flex items-center justify-center pr-6"
                 >
-                    <Link href="/gallery" className="group flex flex-col items-center justify-center gap-6 w-[300px] h-[500px] md:h-[650px] rounded-[2.5rem] border-2 border-dashed border-gray-200 hover:border-black hover:bg-gray-50 transition-all duration-300 cursor-pointer">
-                        <div className="w-20 h-20 rounded-full bg-black text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                            <ArrowRight className="w-8 h-8" />
+                    <Link href="/gallery" className="group flex flex-col items-center justify-center gap-6 w-[250px] h-[400px] md:h-[500px] rounded-[2rem] border-2 border-dashed border-gray-200 hover:border-black hover:bg-gray-50 transition-all duration-300 cursor-pointer">
+                        <div className="w-16 h-16 rounded-full bg-black text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                            <ArrowRight className="w-6 h-6" />
                         </div>
-                        <span className="text-xl font-bold text-gray-900">View All Projects</span>
+                        <span className="text-lg font-bold text-gray-900">View All Projects</span>
                     </Link>
                 </motion.div>
 

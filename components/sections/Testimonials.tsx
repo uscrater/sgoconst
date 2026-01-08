@@ -6,21 +6,21 @@ import { GoogleReviewsData } from "@/lib/google-reviews"
 
 const mockReviews = [
     {
-        name: "John Doe",
-        role: "Homeowner",
-        comment: "SGO Construction transformed our kitchen beyond our expectations. Their attention to detail is unmatched.",
+        name: "Akula Harsha Vardhan Rao",
+        role: "Google Reviewer",
+        comment: "SGO renovated our kitchen, and the results are incredible. The layout is now open and functional, the countertops and cabinets look amazing, and cooking has become so much more enjoyable. Their team was professional, friendly, and detail-oriented. I'd highly recommend them for anyone planning a kitchen remodel—they really deliver.",
         rating: 5
     },
     {
-        name: "Sarah Smith",
-        role: "Business Owner",
-        comment: "Professional, timely, and excellent communication throughout the entire office renovation project.",
+        name: "Elisa M",
+        role: "Google Reviewer",
+        comment: "They did an outstanding job with our project. Reasonable cost, very professional and great communication",
         rating: 5
     },
     {
-        name: "Michael Brown",
-        role: "Real Estate Developer",
-        comment: "I've worked with many contractors, but SGO stands out for their reliability and quality of work.",
+        name: "Lucas Wright",
+        role: "Google Reviewer",
+        comment: "Our bathroom renovation turned out better than I could have imagined. The new tile and glass shower make it feel like a spa. Every time I step in, I feel relaxed — it's such a difference from the old setup.",
         rating: 5
     }
 ]
@@ -77,9 +77,9 @@ export function Testimonials({ googleData }: TestimonialsProps) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                            className="bg-white p-10 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow flex flex-col"
                         >
-                            <div className="flex text-yellow-500 mb-4">
+                            <div className="flex text-yellow-500 mb-6">
                                 {[1, 2, 3, 4, 5].map((s) => (
                                     <Star
                                         key={s}
@@ -88,10 +88,10 @@ export function Testimonials({ googleData }: TestimonialsProps) {
                                     />
                                 ))}
                             </div>
-                            <p className="text-gray-700 mb-6 leading-relaxed line-clamp-4">
+                            <p className="text-gray-700 mb-8 leading-relaxed text-base">
                                 "{review.comment}"
                             </p>
-                            <div className="border-t border-gray-100 pt-4">
+                            <div className="border-t border-gray-100 pt-4 mt-auto">
                                 <p className="font-bold text-foreground">{review.name}</p>
                                 <p className="text-sm text-gray-500">{review.role}</p>
                             </div>

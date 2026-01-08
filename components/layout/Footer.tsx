@@ -17,10 +17,10 @@ export function Footer() {
                             Expert general contractor in MA, delivering quality craftsmanship for over 10 years. From remodeling to new construction, we build with precision and integrity.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="#" className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                            <Link href="https://www.facebook.com/sgoconstructionInc/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                                 <Facebook className="w-5 h-5" />
                             </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                            <Link href="https://www.instagram.com/sgoconstruction_inc/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                                 <Instagram className="w-5 h-5" />
                             </Link>
                         </div>
@@ -57,7 +57,7 @@ export function Footer() {
                                 </div>
                                 <div>
                                     <p className="font-medium text-foreground">Phone</p>
-                                    <p className="text-gray-600">(774) 290-8143</p>
+                                    <p className="text-gray-600">(774) 703-4643</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">
@@ -74,7 +74,27 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-gray-200 pt-8 text-center text-gray-500 text-sm">
-                    <p>&copy; {new Date().getFullYear()} SGO Construction using Next.js. All rights reserved.</p>
+                    <p className="mb-2">&copy; {new Date().getFullYear()} SGO Construction. All rights reserved.</p>
+                    <p className="text-xs">
+                        Made with love by{" "}
+                        <Link
+                            href="https://www.instagram.com/kaimkt_/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-primary transition-colors"
+                        >
+                            Kai Marketing Group
+                        </Link>
+                        {" & "}
+                        <Link
+                            href="https://www.linkedin.com/in/evertonceciliano/?locale=en_US"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-primary transition-colors"
+                        >
+                            Everton Ceciliano
+                        </Link>
+                    </p>
                 </div>
             </div>
         </footer>

@@ -6,61 +6,61 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { InstagramPost } from "@/lib/instagram"
 
-// Mock data using REAL images from public folder
+// Mock data using REAL images from public/galeria folder
 const instagramPosts = [
     {
         id: 1,
-        image: "/kitchen.png",
+        image: "/galeria/466023079_18053520895930474_1414113949545170542_n.jpg",
         likes: 124,
-        caption: "Modern luxury kitchen renovation. #homerenovation #kitchen"
+        caption: "Quality craftsmanship in every detail. #construction #remodeling"
     },
     {
         id: 2,
-        image: "/bathroom.png",
-        likes: 89,
-        caption: "Spa-like bathroom transformation. #interiordesign #bathroom"
+        image: "/galeria/470305529_18056989810930474_8554312164797071817_n.jpg",
+        likes: 189,
+        caption: "Transforming spaces, building dreams. #homeimprovement #renovation"
     },
     {
         id: 3,
-        image: "/decks.png",
+        image: "/galeria/475527138_18061541986930474_7705188157037742622_n.jpg",
         likes: 245,
-        caption: "Custom mahogany deck for outdoor living. #outdoorliving #deck"
+        caption: "Expert workmanship you can trust. #contractor #quality"
     },
     {
         id: 4,
-        image: "/basement.png",
+        image: "/galeria/528765379_18079173229930474_988627470445504468_n.jpg",
         likes: 156,
-        caption: "Finished basement home theater. #basement #remodel"
+        caption: "Your vision, our expertise. #customhomes #building"
     },
     {
         id: 5,
-        image: "/siding.png",
-        likes: 189,
-        caption: "Premium vinyl siding upgrade. #exteriordesign #curbappeal"
+        image: "/galeria/531715830_18079770649930474_7470470581946910414_n.jpg",
+        likes: 198,
+        caption: "Professional results, every time. #construction #craftsmanship"
     },
     {
         id: 6,
-        image: "/trim.png",
-        likes: 92,
-        caption: "Expert finish carpentry and trim work. #details #craftsmanship"
+        image: "/galeria/541438388_18081809488930474_8105047661938798756_n.jpg",
+        likes: 212,
+        caption: "Building excellence since 2018. #sgoconst #massachusetts"
     },
     {
         id: 7,
-        image: "/door.png",
-        likes: 312,
-        caption: "Custom entry door installation. #entryway #homeimprovement"
+        image: "/galeria/573317601_18089926117930474_2676829967025423063_n.jpg",
+        likes: 178,
+        caption: "Attention to detail in every project. #remodel #homedesign"
     },
     {
         id: 8,
-        image: "/gutters.png",
+        image: "/galeria/588544606_18090605248930474_6618060551178244622_n.jpg",
         likes: 145,
-        caption: "Seamless gutter installation. #maintenance #protection"
+        caption: "Quality construction for your home. #builder #renovation"
     },
     {
         id: 9,
-        image: "/services.png",
+        image: "/galeria/591164089_18091667956930474_6778823268204069523_n.jpg",
         likes: 210,
-        caption: "Comprehensive home services. #construction #expert"
+        caption: "Trusted by Massachusetts families. #homeimprovement #local"
     }
 ]
 
@@ -99,7 +99,7 @@ export function InstagramGallery({ posts, title, subtitle }: InstagramGalleryPro
                     </div>
 
                     <Button asChild variant="primary" size="lg" rounded="md" className="font-bold group">
-                        <Link href="https://instagram.com" target="_blank">
+                        <Link href="https://www.instagram.com/sgoconstruction_inc/" target="_blank">
                             Follow Our Page <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </Link>
                     </Button>
@@ -112,7 +112,7 @@ export function InstagramGallery({ posts, title, subtitle }: InstagramGalleryPro
                         const id = post.id;
                         const image = isApiPost ? (post.media_type === "VIDEO" ? post.thumbnail_url || post.media_url : post.media_url) : (post as any).image;
                         const caption = post.caption || "";
-                        const link = isApiPost ? post.permalink : "https://instagram.com";
+                        const link = isApiPost ? post.permalink : "https://www.instagram.com/sgoconstruction_inc/";
 
                         return (
                             <motion.div

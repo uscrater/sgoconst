@@ -19,37 +19,52 @@ export function TrustedCertified() {
                     </h2>
                 </motion.div>
 
-                {/* Logos Grid Placeholder */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-center justify-center max-w-4xl mx-auto opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                {/* Logos Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-center justify-center max-w-5xl mx-auto">
 
-                    {/* Logo Placeholder 1 */}
+                    {/* Trex Logo */}
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="bg-white h-24 rounded-lg flex items-center justify-center border border-gray-200 border-dashed shadow-sm"
+                        viewport={{ once: true }}
+                        className="bg-white h-32 rounded-lg flex items-center justify-center p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
                     >
-                        <span className="text-gray-400 font-bold tracking-widest text-sm">LOGO 1 PLACEHOLDER</span>
+                        <img
+                            src="/partners/TrexPRO-Logo.webp"
+                            alt="Trex Pro"
+                            className="max-h-24 w-auto object-contain"
+                        />
                     </motion.div>
 
-                    {/* Logo Placeholder 2 */}
+                    {/* Andersen Logo */}
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="bg-white h-24 rounded-lg flex items-center justify-center border border-gray-200 border-dashed shadow-sm"
+                        viewport={{ once: true }}
+                        className="bg-white h-32 rounded-lg flex items-center justify-center p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
                     >
-                        <span className="text-gray-400 font-bold tracking-widest text-sm">LOGO 2 PLACEHOLDER</span>
+                        <img
+                            src="/partners/andersen_logo_tm_rectangle_rgb.svg"
+                            alt="Andersen Windows"
+                            className="max-h-16 w-auto object-contain"
+                        />
                     </motion.div>
 
-                    {/* Logo Placeholder 3 */}
+                    {/* James Hardie Logo */}
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="bg-white h-24 rounded-lg flex items-center justify-center border border-gray-200 border-dashed shadow-sm"
+                        viewport={{ once: true }}
+                        className="bg-white h-32 rounded-lg flex items-center justify-center p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
                     >
-                        <span className="text-gray-400 font-bold tracking-widest text-sm">LOGO 3 PLACEHOLDER</span>
+                        <img
+                            src="/partners/james-hardie-vector-logo.svg"
+                            alt="James Hardie"
+                            className="max-h-16 w-auto object-contain"
+                        />
                     </motion.div>
 
                 </div>

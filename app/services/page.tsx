@@ -12,6 +12,13 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Our Services | SGO Construction",
+    description: "Explore our expert home remodeling services including kitchen remodels, bathroom renovations, additions, framing, and more.",
+}
+
 export default function ServicesPage() {
     return (
         <main className="min-h-screen bg-background">

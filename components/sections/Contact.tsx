@@ -41,7 +41,7 @@ export function Contact({ customContent }: ContactProps) {
                                     <MapPin className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="text-foreground font-bold mb-1">Our Office</h4>
+                                    <h4 className="text-foreground font-bold mb-1">Service Location</h4>
                                     <p className="text-gray-500 group-hover:text-primary transition-colors">
                                         35 Millview St, Taunton, MA 02780
                                     </p>
@@ -55,7 +55,7 @@ export function Contact({ customContent }: ContactProps) {
                                 <div>
                                     <h4 className="text-foreground font-bold mb-1">Phone</h4>
                                     <p className="text-gray-500 group-hover:text-primary transition-colors">
-                                        (774) 290-8143
+                                        (774) 703-4643
                                     </p>
                                 </div>
                             </div>
@@ -74,10 +74,10 @@ export function Contact({ customContent }: ContactProps) {
                         </div>
 
                         <div className="flex gap-4 mt-12">
-                            <Link href="#" className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
+                            <Link href="https://www.instagram.com/sgoconstruction_inc/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
                                 <Instagram className="w-5 h-5" />
                             </Link>
-                            <Link href="#" className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
+                            <Link href="https://www.facebook.com/sgoconstructionInc/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
                                 <Facebook className="w-5 h-5" />
                             </Link>
                         </div>

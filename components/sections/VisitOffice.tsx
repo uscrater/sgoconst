@@ -11,11 +11,11 @@ export function VisitOffice() {
                     {/* Left Side: Contact Info Card */}
                     <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl shadow-gray-100/50 border border-gray-100 flex flex-col justify-center h-full">
                         <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-                            Visit Our Office
+                            Based In Taunton
                         </h2>
 
                         <p className="text-gray-500 mb-12 text-lg leading-relaxed font-medium max-w-lg">
-                            Planning a project or have final finishes, our Massachusetts builders are here to help – with honest advice and local expertise.
+                            Serving Easton, Mansfield, Norton, and surrounding areas. Our local team is ready to come to you for a consultation.
                         </p>
 
                         <div className="space-y-10">
@@ -39,8 +39,8 @@ export function VisitOffice() {
                                 </div>
                                 <div className="flex-1">
                                     <p className="text-gray-400 text-sm font-medium mb-1 uppercase tracking-wider">Call our direct line</p>
-                                    <a href="tel:7742908143" className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors block">
-                                        (774) 290-8143
+                                    <a href="tel:7747034643" className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors block">
+                                        (774) 703-4643
                                     </a>
                                     <p className="text-gray-400 text-sm mt-2 font-medium">
                                         Mon-Fri: 8am-6pm | Sat: 9am-1pm
@@ -54,7 +54,7 @@ export function VisitOffice() {
                                     <MapPin className="w-6 h-6" />
                                 </div>
                                 <div className="flex-1">
-                                    <p className="text-gray-400 text-sm font-medium mb-1 uppercase tracking-wider">Visit our office</p>
+                                    <p className="text-gray-400 text-sm font-medium mb-1 uppercase tracking-wider">Service Location</p>
                                     <address className="text-xl md:text-2xl font-bold text-gray-900 not-italic leading-tight group-hover:text-red-600 transition-colors">
                                         35 Millview Street
                                         <br />

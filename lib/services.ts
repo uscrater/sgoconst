@@ -102,7 +102,7 @@ export const services: Service[] = [
         slug: "bathroom-remodeling",
         description: "Your bathroom should be a space of comfort, relaxation, and practicality. Transform outdated bathrooms into modern, spa-like retreats.",
         shortDescription: "Transform outdated bathrooms into modern, spa-like retreats.",
-        image: "/bathroom.png",
+        image: "/banheiro.jpeg",
         icon: Bath,
         content: `
             <p class="lead">Your bathroom should be a space of comfort, relaxation, and practicality. At SGO Construction, we specialize in turning outdated and inefficient bathrooms into modern, spa-like retreats tailored to your needs. Whether you're looking to upgrade fixtures, improve storage, or completely reimagine the layout, our team brings expert craftsmanship and innovative solutions to every project. With a focus on quality, functionality, and aesthetics, we'll help you create a bathroom that blends luxury with everyday convenience.</p>
@@ -240,18 +240,18 @@ export const services: Service[] = [
         `
     },
     {
-        title: "Siding Installation",
-        slug: "siding-installation",
+        title: "Siding",
+        slug: "siding",
         description: "Siding is more than just an exterior finish—it's your home's first line of defense against the elements while also adding to its curb appeal and energy efficiency.",
-        shortDescription: "Expert siding installation for durability and curb appeal.",
+        shortDescription: "Expert siding services for durability and curb appeal.",
         image: "/siding.png",
         icon: Layers,
         content: `
-            <p class="lead">Siding is more than just an exterior finish—it's your home's first line of defense against the elements while also adding to its curb appeal and energy efficiency. At SGO Construction, we offer expert siding installation and replacement services using high-quality materials designed to withstand the harsh New England weather. Whether you're looking for vinyl, fiber cement, or wood siding, our team ensures a flawless installation that enhances durability and aesthetic appeal. With a variety of styles and colors available, we help homeowners achieve a custom look that complements their home while improving insulation and long-term protection.</p>
+            <p class="lead">Siding is more than just an exterior finish—it's your home's first line of defense against the elements while also adding to its curb appeal and energy efficiency. At SGO Construction, we offer expert siding services using high-quality materials designed to withstand the harsh New England weather. Whether you're looking for vinyl, fiber cement, or wood siding, our team ensures a flawless finish that enhances durability and aesthetic appeal.</p>
             
             <div class="mt-12">
                 <h2 class="text-3xl font-bold mb-6">Benefits And Solutions</h2>
-                <p class="text-gray-600 mb-8">Discover how our expert siding remodeling services can enhance functionality, increase home value, and solve common design challenges with modern solutions, quality craftsmanship, and a personalized touch.</p>
+                <p class="text-gray-600 mb-8">Discover how our expert siding services can enhance functionality, increase home value, and solve common design challenges.</p>
                 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-gray-50 p-6 rounded-lg">
@@ -283,16 +283,16 @@ export const services: Service[] = [
 
             <div class="mt-12 bg-gray-50 p-8 rounded-xl">
                 <h2 class="text-2xl font-bold mb-6">Trusted Siding Contractors in Easton & Mansfield, MA</h2>
-                <p class="mb-6">Looking for a professional siding contractor in Easton, MA or Mansfield, MA? SGO Construction is the local expert you can count on for high-quality siding installation, replacement, and repairs. Serving Easton and Mansfield homeowners, our team uses premium materials vinyl, fiber cement, and wood to ensure your house stands up to New England's challenging climate while looking its best.</p>
+                <p class="mb-6">Looking for a professional siding contractor in Easton, MA or Mansfield, MA? SGO Construction is the local expert you can count on for high-quality siding installation, replacement, and repairs.</p>
                 
                 <div class="grid md:grid-cols-2 gap-8">
                      <div>
                         <h3 class="text-xl font-bold mb-3">Siding Contractor Easton MA</h3>
-                        <p class="text-sm text-gray-600">SGO Construction delivers flawless siding solutions for Easton homes. Whether you are upgrading to more energy-efficient vinyl siding, repairing weather damage, or boosting curb appeal, our Easton siding contractors customize every project to suit your house style and budget. We offer personalized consultations, honest estimates, and efficient installation for lasting protection and value.</p>
+                        <p class="text-sm text-gray-600">SGO Construction delivers flawless siding solutions for Easton homes. Whether you are upgrading to more energy-efficient vinyl siding, repairing weather damage, or boosting curb appeal, our Easton siding contractors customize every project to suit your house style and budget.</p>
                      </div>
                      <div>
                         <h3 class="text-xl font-bold mb-3">Siding Contractor Mansfield MA</h3>
-                        <p class="text-sm text-gray-600">In Mansfield, our siding professionals provide durable, attractive siding that improves home insulation and instantly elevates its appearance. From historic homes to contemporary builds, Mansfield residents rely on SGO Construction for transparent service, quick turnarounds, and siding replacement that reduces maintenance for years.</p>
+                        <p class="text-sm text-gray-600">In Mansfield, our siding professionals provide durable, attractive siding that improves home insulation and instantly elevates its appearance.</p>
                      </div>
                 </div>
             </div>
@@ -306,7 +306,7 @@ export const services: Service[] = [
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Easton</li>
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Mansfield</li>
                     </ul>
-                     <ul class="space-y-2">
+                    <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Foxboro</li>
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Wrentham</li>
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Raynham</li>
@@ -384,7 +384,7 @@ export const services: Service[] = [
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Easton</li>
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Mansfield</li>
                     </ul>
-                     <ul class="space-y-2">
+                    <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Foxboro</li>
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Wrentham</li>
                         <li class="flex items-center gap-2 text-sm text-gray-700"><span class="text-primary">✔</span> Raynham</li>
@@ -400,18 +400,18 @@ export const services: Service[] = [
         `
     },
     {
-        title: "Trim Installation",
-        slug: "trim-installation",
-        description: "Add the perfect finishing touch to your home with expertly crafted trim that enhances every room’s character and style.",
-        shortDescription: "Expertly crafted trim that enhances every room’s character.",
+        title: "Home Addition",
+        slug: "home-addition",
+        description: "Expand your living space and increase your property value with expert home additions tailored to your family's growing needs.",
+        shortDescription: "Expand your home with expert additions tailored to your needs.",
         image: "/trim.png",
-        icon: Scissors,
+        icon: DoorOpen,
         content: `
-            <p class="lead">Add the perfect finishing touch to your home with expertly crafted trim that enhances every room’s character and style. At SGO Construction, we believe that the details make the difference. From crown molding and baseboards to wainscoting and window casings, our skilled carpenters deliver precise, high-quality trim installation that elevates the look of your interiors.</p>
+            <p class="lead">Expand your living space and increase your property value with expert home additions tailored to your family's growing needs. At SGO Construction, we specialize in seamless home expansions, from extra bedrooms and sunrooms to garage additions and second-story build-outs. We handle the entire process, including design, permitting, framing, and finishing, ensuring your new space blends perfectly with your existing home.</p>
 
             <div class="mt-12 bg-gray-50 p-8 rounded-xl">
-                 <h2 class="text-2xl font-bold mb-6">Expert Trim Services</h2>
-                 <p className="mb-6">We provide custom woodworking and trim solutions for homeowners in Easton, Mansfield, Norton, and surrounding areas.</p>
+                 <h2 class="text-2xl font-bold mb-6">Expert Home Additions</h2>
+                 <p className="mb-6">We provide custom home addition solutions for homeowners in Easton, Mansfield, Norton, and surrounding areas. Whether you need more room for a growing family or a dedicated home office, we bring your vision to life.</p>
             </div>
              <div class="mt-12">
                 <h3 class="text-xl font-bold mb-4">Proudly Serving the Following Areas</h3>
@@ -476,8 +476,8 @@ export const services: Service[] = [
         `
     },
     {
-        title: "Door & Window Installations",
-        slug: "door-and-window-installations",
+        title: "Doors & Windows",
+        slug: "doors-and-windows",
         description: "Upgrade your home with sleek, energy-efficient doors and windows that boost curb appeal and keep your space comfortable year-round.",
         shortDescription: "Energy-efficient doors and windows to boost curb appeal and comfort.",
         image: "/door.png",

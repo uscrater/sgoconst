@@ -14,23 +14,6 @@ export function FullWidthMap() {
                 className="w-full h-full"
                 title="SGO Construction Location Map"
             />
-
-            {/* Overlay Card for Address (Optional - mimicking the pin/card in some maps) */}
-            <div className="absolute top-8 left-8 md:top-12 md:left-12 bg-white p-6 rounded-xl shadow-xl max-w-xs z-10 border border-gray-200 hidden md:block">
-                <h3 className="font-bold text-lg mb-2">SGO Construction</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                    35 Millview St<br />
-                    Taunton, MA 02780
-                </p>
-                <a
-                    href="https://maps.google.com/maps?ll=41.927405,-71.107907&z=13&t=m&hl=en&gl=US&mapclient=embed&cid=9199341640539171731"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary text-sm font-bold hover:underline"
-                >
-                    Get Directions
-                </a>
-            </div>
         </section>
     )
 }

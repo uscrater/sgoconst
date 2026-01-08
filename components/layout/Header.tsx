@@ -11,6 +11,7 @@ import { services } from "@/lib/services"
 export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false)
+    const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
 
     // Prevent body scroll when mobile menu is open
     useEffect(() => {
@@ -22,17 +23,17 @@ export function Header() {
     }, [mobileMenuOpen])
 
     return (
-        <header className="relative top-0 left-0 right-0 z-50 flex flex-col w-full">
+        <header className="sticky top-0 left-0 right-0 z-50 flex flex-col w-full bg-white">
             {/* ROW 1: Logo & Contact Info */}
             <div className="bg-white border-b border-gray-200">
                 <div className="container mx-auto px-4 md:px-0">
-                    <div className="flex items-center justify-between h-[100px]">
+                    <div className="flex items-center justify-between h-[70px] sm:h-[80px] lg:h-[100px]">
                         {/* Logo - Left */}
-                        <Link href="/" className="flex items-center z-50 relative shrink-0">
+                        <Link href="/" className="flex items-center z-[60] relative shrink-0">
                             <img
                                 src="/logo (2).png"
                                 alt="SGO Construction"
-                                className="h-16 w-auto object-contain"
+                                className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
                             />
                         </Link>
 
@@ -55,21 +56,21 @@ export function Header() {
                                 <span>info@sgoconst.com</span>
                             </a>
                             <a
-                                href="tel:7742908143"
+                                href="tel:7747034643"
                                 className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
                             >
                                 <Phone className="w-4 h-4 text-primary" />
-                                <span>(774) 290-8143</span>
+                                <span>(774) 703-4643</span>
                             </a>
                         </div>
 
                         {/* Mobile Toggle */}
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="lg:hidden relative z-50 p-2 text-foreground hover:text-primary transition-colors"
+                            className="lg:hidden relative z-[60] p-2 text-foreground hover:text-primary transition-colors"
                             aria-label="Toggle menu"
                         >
-                            {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+                            {mobileMenuOpen ? <X className="w-7 h-7 sm:w-8 sm:h-8" /> : <Menu className="w-7 h-7 sm:w-8 sm:h-8" />}
                         </button>
                     </div>
                 </div>
@@ -142,7 +143,7 @@ export function Header() {
                             </Link>
 
                             <Link
-                                href="/#financing"
+                                href="/financing"
                                 className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
                             >
                                 Financing
@@ -178,35 +179,71 @@ export function Header() {
             <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="fixed inset-0 z-40 bg-white lg:hidden flex flex-col pt-32 px-8 pb-10 overflow-y-auto"
+                        initial={{ opacity: 0, x: "100%" }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: "100%" }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="fixed inset-0 z-[55] bg-white lg:hidden flex flex-col pt-24 sm:pt-28 px-6 sm:px-8 pb-10 overflow-y-auto"
                     >
-                        <nav className="flex flex-col gap-8">
+                        <nav className="flex flex-col gap-6 sm:gap-8">
                             <Link
                                 href="/"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="text-2xl font-bold text-primary tracking-widest uppercase"
+                                className="text-xl sm:text-2xl font-bold text-primary tracking-widest uppercase"
                             >
                                 HOME
                             </Link>
 
-                            <Link
-                                href="/services"
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-widest uppercase flex items-center gap-2"
-                            >
-                                SERVICES <Plus className="w-5 h-5 text-primary" />
-                            </Link>
+
+                            {/* Services Accordion */}
+                            <div>
+                                <button
+                                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                                    className="text-xl sm:text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-widest uppercase flex items-center gap-2 w-full"
+                                >
+                                    SERVICES <Plus className={`w-5 h-5 text-primary transition-transform ${mobileServicesOpen ? 'rotate-45' : ''}`} />
+                                </button>
+
+                                <AnimatePresence>
+                                    {mobileServicesOpen && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="overflow-hidden"
+                                        >
+                                            <div className="pl-4 mt-4 space-y-3 border-l-2 border-primary/30">
+                                                {services.map((service) => (
+                                                    <Link
+                                                        key={service.slug}
+                                                        href={`/services/${service.slug}`}
+                                                        onClick={() => setMobileMenuOpen(false)}
+                                                        className="block text-base font-semibold text-gray-600 hover:text-primary transition-colors"
+                                                    >
+                                                        {service.title}
+                                                    </Link>
+                                                ))}
+                                                <Link
+                                                    href="/services"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                    className="block text-base font-bold text-primary hover:text-primary-hover transition-colors pt-2"
+                                                >
+                                                    View All Services →
+                                                </Link>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+
 
                             {["ABOUT", "GALLERY", "FINANCING", "CONTACT"].map((link) => (
                                 <Link
                                     key={link}
-                                    href={link === "GALLERY" ? "/gallery" : link === "FINANCING" ? "/#financing" : link === "CONTACT" ? "/contact" : `/${link.toLowerCase()}`}
+                                    href={link === "GALLERY" ? "/gallery" : link === "FINANCING" ? "/financing" : link === "CONTACT" ? "/contact" : `/${link.toLowerCase()}`}
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className="text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-widest uppercase"
+                                    className="text-xl sm:text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-widest uppercase"
                                 >
                                     {link}
                                 </Link>
@@ -214,9 +251,9 @@ export function Header() {
 
                             <div className="mt-auto border-t border-gray-100 pt-8 space-y-6">
                                 <div className="flex flex-col gap-4 text-sm text-gray-600">
-                                    <a href="tel:7742908143" className="flex items-center gap-3 hover:text-primary transition-colors">
+                                    <a href="tel:7747034643" className="flex items-center gap-3 hover:text-primary transition-colors">
                                         <Phone className="w-5 h-5 text-primary" />
-                                        (774) 290-8143
+                                        (774) 703-4643
                                     </a>
                                     <a href="mailto:info@sgoconst.com" className="flex items-center gap-3 hover:text-primary transition-colors">
                                         <Mail className="w-5 h-5 text-primary" />

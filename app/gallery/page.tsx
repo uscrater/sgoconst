@@ -1,8 +1,4 @@
 import { InstagramGallery } from "@/components/sections/InstagramGallery"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { getInstagramPosts } from "@/lib/instagram"
-import { ArrowRight } from "lucide-react"
 import { PageHero } from "@/components/ui/PageHero"
 import { Contact } from "@/components/sections/Contact"
 import {
@@ -13,13 +9,16 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { Metadata } from "next"
 
-export default async function GalleryPage() {
-    const posts = await getInstagramPosts()
+export const metadata: Metadata = {
+    title: "Our Portfolio | SGO Construction",
+    description: "View our gallery of completed projects. See examples of our kitchen remodeling, bathroom renovations, and custom home additions.",
+}
 
+export default function GalleryPage() {
     return (
         <main className="bg-white min-h-screen">
-
             <PageHero
                 title="Our Portfolio"
                 description="Explore our portfolio of completed projects. From kitchen remodels to custom home additions, see the quality and craftsmanship we bring to every job."
@@ -40,7 +39,6 @@ export default async function GalleryPage() {
             </PageHero>
 
             <InstagramGallery
-                posts={posts}
                 title={
                     <>
                         Our <span className="text-primary">Portfolio</span>
@@ -49,7 +47,6 @@ export default async function GalleryPage() {
             />
 
             <Contact />
-
         </main>
     )
 }
