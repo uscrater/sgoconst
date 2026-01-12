@@ -17,7 +17,7 @@ export default function ContactPage() {
             <PageHero
                 title="Get in Touch"
                 description="We're here to help with your next project. Reach out to us for a consultation, quote, or any questions you may have."
-                image="/kitchen.png"
+                image="/cozinha.jpeg"
                 badge="Contact Us"
             >
                 <nav className="flex items-center gap-2 text-sm text-gray-300">

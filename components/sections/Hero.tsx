@@ -8,7 +8,7 @@ import { ArrowRight, Star } from "lucide-react"
 import Link from "next/link"
 
 const heroImages = [
-    "/kitchen.png",
+    "/cozinha.jpeg",
     "/banheiro.jpeg",
     "/decks.png",
     "/Image_fx (3).png",

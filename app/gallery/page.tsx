@@ -22,7 +22,7 @@ export default function GalleryPage() {
             <PageHero
                 title="Our Portfolio"
                 description="Explore our portfolio of completed projects. From kitchen remodels to custom home additions, see the quality and craftsmanship we bring to every job."
-                image="/kitchen.png"
+                image="/cozinha.jpeg"
                 badge="Gallery"
             >
                 <Breadcrumb>

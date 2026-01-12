@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         siteName: "SGO Construction",
         images: [
             {
-                url: "/kitchen.png",
+                url: "/cozinha.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Modern Kitchen Remodel by SGO Construction",
@@ -96,7 +96,7 @@ export default function KitchenBathPage() {
             <PageHero
                 title="Kitchen & Bathroom Remodeling"
                 description="Transform the two most important rooms in your home. Serving remodeling needs in Easton, Mansfield, Norton, and surrounding MA towns."
-                image="/kitchen.png"
+                image="/cozinha.jpeg"
                 badge="Specialized Service"
             >
                 <Breadcrumb>
@@ -153,7 +153,7 @@ export default function KitchenBathPage() {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
                             <Image
-                                src="/kitchen.png"
+                                src="/cozinha.jpeg"
                                 alt="Modern Kitchen Renovation in Easton MA"
                                 fill
                                 className="object-cover"

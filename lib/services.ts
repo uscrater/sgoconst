@@ -16,7 +16,7 @@ export const services: Service[] = [
         slug: "kitchen-remodeling",
         description: "Transform your outdated kitchen into a modern, functional, and stylish space tailored to your lifestyle.",
         shortDescription: "Transform your outdated kitchen into a modern, functional, and stylish space.",
-        image: "/kitchen.png",
+        image: "/cozinha.jpeg",
         icon: ChefHat,
         content: `
             <p class="lead">Your kitchen is more than just a place to cook—it's the heart of your home. At SGO Construction, we specialize in transforming outdated kitchens into modern, functional, and stylish spaces tailored to your lifestyle. Whether you're looking for sleek cabinetry, upgraded countertops, or a complete layout overhaul, our team brings precision and creativity to every project. With a focus on quality craftsmanship and attention to detail, we'll help you create a kitchen that's as beautiful as it is practical.</p>

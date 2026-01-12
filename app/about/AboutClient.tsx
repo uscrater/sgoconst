@@ -32,7 +32,7 @@ export default function AboutClient() {
             <PageHero
                 title="About Us"
                 description="Crafting Quality and Building Trust Through Expertise Since 2018."
-                image="/kitchen.png"
+                image="/cozinha.jpeg"
                 badge="Who We Are"
             >
                 <Breadcrumb>

@@ -11,7 +11,7 @@ const projects = [
         id: 1,
         title: "Luxury Kitchen Remodel",
         location: "Taunton, MA",
-        image: "/kitchen.png",
+        image: "/cozinha.jpeg",
         category: "Interior",
         year: "2024"
     },
