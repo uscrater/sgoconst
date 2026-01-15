@@ -57,7 +57,7 @@ export function Footer() {
                                 </div>
                                 <div>
                                     <p className="font-medium text-foreground">Phone</p>
-                                    <p className="text-gray-600">(774) 703-4643</p>
+                                    <p className="text-gray-600">(774) 703-4084</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-4">

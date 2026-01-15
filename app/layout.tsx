@@ -90,7 +90,7 @@ export default function RootLayout({
     "@type": "GeneralContractor",
     "name": "SGO Construction",
     "url": "https://sgoconst.com",
-    "telephone": "(774) 703-4643",
+    "telephone": "(774) 703-4084",
     "email": "info@sgoconst.com",
     "address": {
       "@type": "PostalAddress",

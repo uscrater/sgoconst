@@ -56,11 +56,11 @@ export function Header() {
                                 <span>info@sgoconst.com</span>
                             </a>
                             <a
-                                href="tel:7747034643"
+                                href="tel:7747034084"
                                 className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
                             >
                                 <Phone className="w-4 h-4 text-primary" />
-                                <span>(774) 703-4643</span>
+                                <span>(774) 703-4084</span>
                             </a>
                         </div>
 
@@ -251,9 +251,9 @@ export function Header() {
 
                             <div className="mt-auto border-t border-gray-100 pt-8 space-y-6">
                                 <div className="flex flex-col gap-4 text-sm text-gray-600">
-                                    <a href="tel:7747034643" className="flex items-center gap-3 hover:text-primary transition-colors">
+                                    <a href="tel:7747034084" className="flex items-center gap-3 hover:text-primary transition-colors">
                                         <Phone className="w-5 h-5 text-primary" />
-                                        (774) 703-4643
+                                        (774) 703-4084
                                     </a>
                                     <a href="mailto:info@sgoconst.com" className="flex items-center gap-3 hover:text-primary transition-colors">
                                         <Mail className="w-5 h-5 text-primary" />

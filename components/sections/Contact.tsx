@@ -55,7 +55,7 @@ export function Contact({ customContent }: ContactProps) {
                                 <div>
                                     <h4 className="text-foreground font-bold mb-1">Phone</h4>
                                     <p className="text-gray-500 group-hover:text-primary transition-colors">
-                                        (774) 703-4643
+                                        (774) 703-4084
                                     </p>
                                 </div>
                             </div>
