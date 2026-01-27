@@ -14,10 +14,13 @@ import {
 import { Loader2, CheckCircle2, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { services } from "@/lib/services"
+import { Checkbox } from "@/components/ui/checkbox"
+import Link from "next/link"
 
 export function BookingForm({ className }: { className?: string }) {
     const [isLoading, setIsLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
+    const [termsAccepted, setTermsAccepted] = useState(false)
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -153,7 +156,7 @@ export function BookingForm({ className }: { className?: string }) {
 
             <Button
                 type="submit"
-                disabled={isLoading}
+                disabled={isLoading || !termsAccepted}
                 variant="primary"
                 size="lg"
                 rounded="md"
@@ -172,9 +175,23 @@ export function BookingForm({ className }: { className?: string }) {
                 )}
             </Button>
 
-            <p className="text-center text-xs text-gray-500 mt-4 leading-relaxed">
-                By submitting this form, you agree to our privacy policy. Your information is safe with us.
-            </p>
+            <div className="flex items-start space-x-2 mt-4">
+                <Checkbox
+                    id="terms"
+                    name="terms"
+                    checked={termsAccepted}
+                    onCheckedChange={(checked) => setTermsAccepted(checked === true)}
+                    required
+                    className="mt-1"
+                />
+                <label
+                    htmlFor="terms"
+                    className="text-sm text-gray-500 leading-snug cursor-pointer"
+                >
+                    I agree to the <Link href="/privacy-policy" className="text-primary hover:underline font-medium">privacy policy</Link> and consent to being contacted.
+                </label>
+            </div>
         </form>
     )
 }
+
