@@ -13,20 +13,20 @@ import {
 } from "@/components/ui/breadcrumb"
 
 export const metadata: Metadata = {
-    title: "Kitchen & Bathroom Remodeling in Easton & Mansfield, MA | SGO Construction",
-    description: "Transform your home with expert kitchen and bathroom remodeling services in Easton, Mansfield, and Norton, MA. SGO Construction specializes in custom cabinetry, luxury baths, and modern designs.",
-    keywords: ["Kitchen Remodeling Easton MA", "Bathroom Renovation Mansfield MA", "Home Remodeling Norton MA", "Custom Kitchens", "Luxury Bathrooms", "SGO Construction"],
+    title: "Deck & Porch Building in Easton & Mansfield, MA | SGO Construction",
+    description: "Custom deck and porch construction in Easton, Mansfield, and Norton, MA. SGO Construction builds beautiful, durable outdoor living spaces with premium materials and expert craftsmanship.",
+    keywords: ["Deck Building Easton MA", "Porch Construction Mansfield MA", "Custom Decks Norton MA", "Composite Decking", "Screened Porch", "SGO Construction"],
     openGraph: {
-        title: "Kitchen & Bathroom Remodeling | SGO Construction",
-        description: "Expert kitchen and bathroom renovations in Easton and Mansfield, MA. Quality craftsmanship, timely completion, and premium materials.",
-        url: "https://sgoconstruction.com/kitchen-and-bathroom-remodeling",
+        title: "Deck & Porch Building | SGO Construction",
+        description: "Custom deck and porch construction in Easton and Mansfield, MA. Quality craftsmanship, premium materials, and outdoor spaces built to last.",
+        url: "https://sgoconstruction.com/deck-and-porches",
         siteName: "SGO Construction",
         images: [
             {
-                url: "/cozinha.jpeg",
+                url: "/decks.png",
                 width: 1200,
                 height: 630,
-                alt: "Modern Kitchen Remodel by SGO Construction",
+                alt: "Custom Deck Construction by SGO Construction",
             },
         ],
         locale: "en_US",
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     },
 }
 
-export default function KitchenBathPage() {
+export default function DeckAndPorchesPage() {
     // Schema.org Structured Data
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "serviceType": "Kitchen and Bathroom Remodeling",
+        "serviceType": "Deck and Porch Construction",
         "provider": {
             "@type": "GeneralContractor",
             "name": "SGO Construction",
@@ -60,29 +60,29 @@ export default function KitchenBathPage() {
             { "@type": "City", "name": "Norton" },
             { "@type": "City", "name": "Foxboro" }
         ],
-        "description": "Professional kitchen and bathroom remodeling services including custom cabinetry, countertops, walk-in showers, and layout optimization."
+        "description": "Professional deck and porch construction services including composite decking, screened porches, railings, and outdoor living spaces."
     }
 
     const benefits = [
         {
             icon: Star,
             title: "Expert Craftsmanship",
-            description: "Over 10 years of experience delivering high-end finishes and structural integrity for homeowners in Easton, Mansfield, and beyond."
+            description: "Over 10 years of experience building custom decks and porches for homeowners in Easton, Mansfield, and surrounding areas."
         },
         {
             icon: Clock,
-            title: "Timely Completion",
-            description: "Efficient workflows ensuring your kitchen or bath project is completed on schedule without cutting corners."
+            title: "Built to Last",
+            description: "Engineered foundations and premium materials ensure your deck or porch withstands New England weather for decades."
         },
         {
             icon: ShieldCheck,
             title: "Fully Licensed & Insured",
-            description: "Peace of mind knowing your Massachusetts home is in the hands of qualified professionals adhering to all local codes."
+            description: "All projects are built to Massachusetts building codes with proper permits, inspections, and structural integrity."
         },
         {
             icon: CheckCircle2,
             title: "Premium Materials",
-            description: "We source only the best materials to ensure durability and long-lasting value for your renovation investment."
+            description: "We use top-grade composite, hardwood, and pressure-treated lumber backed by manufacturer warranties."
         }
     ]
 
@@ -94,9 +94,9 @@ export default function KitchenBathPage() {
             />
 
             <PageHero
-                title="Kitchen & Bathroom Remodeling"
-                description="Transform the two most important rooms in your home. Serving remodeling needs in Easton, Mansfield, Norton, and surrounding MA towns."
-                image="/cozinha.jpeg"
+                title="Deck & Porch Construction"
+                description="Expand your living space with a custom-built deck or porch. Serving homeowners in Easton, Mansfield, Norton, and surrounding MA communities."
+                image="/decks.png"
                 badge="Specialized Service"
             >
                 <Breadcrumb>
@@ -106,7 +106,7 @@ export default function KitchenBathPage() {
                         </BreadcrumbItem>
                         <BreadcrumbSeparator className="text-white/50" />
                         <BreadcrumbItem>
-                            <BreadcrumbPage className="text-white font-semibold">Kitchen & Bath</BreadcrumbPage>
+                            <BreadcrumbPage className="text-white font-semibold">Decks & Porches</BreadcrumbPage>
                         </BreadcrumbItem>
                     </BreadcrumbList>
                 </Breadcrumb>
@@ -123,8 +123,8 @@ export default function KitchenBathPage() {
                             The SGO Difference
                         </h2>
                         <p className="text-gray-600 text-lg leading-relaxed">
-                            Renovating your kitchen or bathroom is a significant investment.
-                            Here is why homeowners across Massachusetts trust us with their vision.
+                            A well-built deck or porch adds value, beauty, and livable square footage to your home.
+                            Here's why Massachusetts homeowners trust us to build their outdoor spaces.
                         </p>
                     </div>
 
@@ -147,40 +147,40 @@ export default function KitchenBathPage() {
                 </div>
             </section>
 
-            {/* Kitchen Section */}
+            {/* Decks Section */}
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
                             <Image
-                                src="/cozinha.jpeg"
-                                alt="Modern Kitchen Renovation in Easton MA"
+                                src="/decks.png"
+                                alt="Custom Deck Construction in Easton MA"
                                 fill
                                 className="object-cover"
                             />
                         </div>
                         <div>
-                            <span className="text-primary font-bold mb-2 block">Kitchen Remodeling</span>
+                            <span className="text-primary font-bold mb-2 block">Custom Decks</span>
                             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                                The Heart of Your Home
+                                Your Outdoor Living Room
                             </h2>
                             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                                We specialize in creating dream kitchens for families in Easton and Mansfield.
-                                From open-concept layouts and modern cabinetry to high-performance islands,
-                                we design spaces that bring people together.
+                                Whether you envision a multi-level entertainment deck or a simple backyard retreat,
+                                we design and build custom decks that complement your home and lifestyle.
+                                From composite to natural hardwood, we offer options for every budget.
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center gap-3 text-gray-700 font-medium">
                                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                                    Custom Cabinetry & Storage Solutions
+                                    Composite & Hardwood Decking Options
                                 </li>
                                 <li className="flex items-center gap-3 text-gray-700 font-medium">
                                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                                    Premium Countertops (Quartz, Granite)
+                                    Multi-Level & Wraparound Designs
                                 </li>
                                 <li className="flex items-center gap-3 text-gray-700 font-medium">
                                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                                    Smart Lighting & Appliance Integration
+                                    Built-In Lighting & Railings
                                 </li>
                             </ul>
                         </div>
@@ -188,31 +188,31 @@ export default function KitchenBathPage() {
                 </div>
             </section>
 
-            {/* Bathroom Section */}
+            {/* Porches Section */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="max-w-3xl mx-auto">
-                        <span className="text-primary font-bold mb-2 block">Bathroom Renovations</span>
+                        <span className="text-primary font-bold mb-2 block">Porch Construction</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                            Your Private Spa Retreat
+                            Classic Comfort, Year-Round
                         </h2>
                         <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                            Turn your daily routine into a relaxing escape.
-                            We combine aesthetics with waterproofing excellence to create
-                            bathrooms that are beautiful, functional, and durable for years to come.
+                            A beautiful porch adds charm and character to any home. We build front porches,
+                            screened-in porches, and three-season rooms that let you enjoy the outdoors
+                            while staying protected from the elements.
                         </p>
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-gray-700 font-medium">
                                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                                Walk-in Showers & Glass Enclosures
+                                Screened-In & Open Porch Designs
                             </li>
                             <li className="flex items-center gap-3 text-gray-700 font-medium">
                                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                                Luxury Vanities & Heated Flooring
+                                Three-Season & Four-Season Rooms
                             </li>
                             <li className="flex items-center gap-3 text-gray-700 font-medium">
                                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                                Water-Efficient Fixtures
+                                Custom Columns, Trim & Finishes
                             </li>
                         </ul>
                     </div>
@@ -222,9 +222,9 @@ export default function KitchenBathPage() {
             <Contact
                 customContent={
                     <>
-                        <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Start Your Project?</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Build Your Dream Deck or Porch?</h3>
                         <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                            Whether you're planning a complete kitchen overhaul or a bathroom update,
+                            Whether you want a spacious deck for entertaining or a cozy screened porch for relaxing,
                             our team is ready to bring your vision to life. Fill out the form to request
                             your free, no-obligation estimate.
                         </p>
