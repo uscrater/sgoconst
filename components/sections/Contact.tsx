@@ -74,11 +74,11 @@ export function Contact({ customContent }: ContactProps) {
                         </div>
 
                         <div className="flex gap-4 mt-12">
-                            <Link href="https://www.instagram.com/sgoconstruction_inc/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
-                                <Instagram className="w-5 h-5" />
+                            <Link href="https://www.instagram.com/sgoconstruction_inc/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
+                                <Instagram className="w-5 h-5" aria-hidden="true" />
                             </Link>
-                            <Link href="https://www.facebook.com/sgoconstructionInc/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
-                                <Facebook className="w-5 h-5" />
+                            <Link href="https://www.facebook.com/sgoconstructionInc/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
+                                <Facebook className="w-5 h-5" aria-hidden="true" />
                             </Link>
                         </div>
                     </div>

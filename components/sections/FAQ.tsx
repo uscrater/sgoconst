@@ -62,11 +62,14 @@ export function FAQ() {
                                     <button
                                         onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                         className="w-full flex items-center justify-between py-8 text-left group"
+                                        aria-expanded={openIndex === index}
+                                        aria-controls={`faq-answer-${index}`}
+                                        id={`faq-question-${index}`}
                                     >
                                         <span className={`text-xl md:text-2xl font-bold transition-colors ${openIndex === index ? 'text-foreground' : 'text-gray-500 group-hover:text-primary'}`}>
                                             {item.question}
                                         </span>
-                                        <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${openIndex === index ? 'bg-primary border-primary text-white rotate-180' : 'border-gray-300 text-gray-400 group-hover:border-primary group-hover:text-primary'}`}>
+                                        <div className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${openIndex === index ? 'bg-primary border-primary text-white rotate-180' : 'border-gray-300 text-gray-400 group-hover:border-primary group-hover:text-primary'}`} aria-hidden="true">
                                             {openIndex === index ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                                         </div>
                                     </button>
@@ -74,6 +77,9 @@ export function FAQ() {
                                     <AnimatePresence>
                                         {openIndex === index && (
                                             <motion.div
+                                                id={`faq-answer-${index}`}
+                                                role="region"
+                                                aria-labelledby={`faq-question-${index}`}
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: "auto", opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}

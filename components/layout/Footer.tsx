@@ -17,27 +17,27 @@ export function Footer() {
                             Expert general contractor in MA, delivering quality craftsmanship for over 10 years. From remodeling to new construction, we build with precision and integrity.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="https://www.facebook.com/sgoconstructionInc/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                                <Facebook className="w-5 h-5" />
+                            <Link href="https://www.facebook.com/sgoconstructionInc/" target="_blank" rel="noopener noreferrer" aria-label="Visit SGO Construction on Facebook" className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                                <Facebook className="w-5 h-5" aria-hidden="true" />
                             </Link>
-                            <Link href="https://www.instagram.com/sgoconstruction_inc/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                                <Instagram className="w-5 h-5" />
+                            <Link href="https://www.instagram.com/sgoconstruction_inc/" target="_blank" rel="noopener noreferrer" aria-label="Visit SGO Construction on Instagram" className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                                <Instagram className="w-5 h-5" aria-hidden="true" />
                             </Link>
                         </div>
                     </div>
 
                     {/* Links */}
-                    <div>
+                    <nav aria-label="Footer navigation">
                         <h4 className="text-lg font-bold mb-6">Quick Links</h4>
                         <ul className="space-y-4">
-                            <li><Link href="#" className="text-gray-600 hover:text-primary transition-colors">Home</Link></li>
+                            <li><Link href="/" className="text-gray-600 hover:text-primary transition-colors">Home</Link></li>
                             <li><Link href="/about" className="text-gray-600 hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="#services" className="text-gray-600 hover:text-primary transition-colors">Services</Link></li>
+                            <li><Link href="/services" className="text-gray-600 hover:text-primary transition-colors">Services</Link></li>
                             <li><Link href="/gallery" className="text-gray-600 hover:text-primary transition-colors">Portfolio</Link></li>
-                            <li><Link href="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</Link></li>
+                            <li><Link href="/contact" className="text-gray-600 hover:text-primary transition-colors">Contact</Link></li>
                             <li><Link href="/privacy-policy" className="text-gray-600 hover:text-primary transition-colors">Privacy Policy</Link></li>
                         </ul>
-                    </div>
+                    </nav>
 
                     {/* Contact */}
                     <div>

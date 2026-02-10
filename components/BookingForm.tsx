@@ -66,6 +66,8 @@ export function BookingForm({ className }: { className?: string }) {
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
+                role="alert"
+                aria-live="polite"
                 className={`bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center justify-center min-h-[400px] ${className}`}
             >
                 <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-6">
@@ -127,9 +129,9 @@ export function BookingForm({ className }: { className?: string }) {
             </div>
 
             <div className="space-y-2">
-                <label className="text-sm font-semibold text-foreground">Service Interested In</label>
+                <label htmlFor="service" className="text-sm font-semibold text-foreground">Service Interested In</label>
                 <Select required name="service">
-                    <SelectTrigger className="h-12 bg-white border-gray-300">
+                    <SelectTrigger id="service" className="h-12 bg-white border-gray-300" aria-label="Select a service">
                         <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>

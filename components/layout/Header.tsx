@@ -68,7 +68,9 @@ export function Header() {
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             className="lg:hidden relative z-[60] p-2 text-foreground hover:text-primary transition-colors"
-                            aria-label="Toggle menu"
+                            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                            aria-expanded={mobileMenuOpen}
+                            aria-controls="mobile-menu"
                         >
                             {mobileMenuOpen ? <X className="w-7 h-7 sm:w-8 sm:h-8" /> : <Menu className="w-7 h-7 sm:w-8 sm:h-8" />}
                         </button>
@@ -81,7 +83,7 @@ export function Header() {
                 <div className="container mx-auto px-4 md:px-0">
                     <div className="flex items-center justify-between h-[60px]">
                         {/* Navigation - Left Aligned */}
-                        <nav className="flex items-center gap-8">
+                        <nav aria-label="Main navigation" className="flex items-center gap-8">
                             <Link
                                 href="/"
                                 className="text-sm font-semibold text-primary hover:text-primary-hover transition-colors"
@@ -98,9 +100,11 @@ export function Header() {
                                 <Link
                                     href="/services"
                                     className="flex items-center gap-1 text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                                    aria-expanded={servicesDropdownOpen}
+                                    aria-haspopup="true"
                                 >
                                     Services
-                                    <span className="text-primary text-xs ml-0.5">+</span>
+                                    <span className="text-primary text-xs ml-0.5" aria-hidden="true">+</span>
                                 </Link>
 
                                 <AnimatePresence>
@@ -183,9 +187,12 @@ export function Header() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
+                        id="mobile-menu"
+                        role="dialog"
+                        aria-label="Mobile navigation menu"
                         className="fixed inset-0 z-[55] bg-white lg:hidden flex flex-col pt-24 sm:pt-28 px-6 sm:px-8 pb-10 overflow-y-auto"
                     >
-                        <nav className="flex flex-col gap-6 sm:gap-8">
+                        <nav aria-label="Mobile navigation" className="flex flex-col gap-6 sm:gap-8">
                             <Link
                                 href="/"
                                 onClick={() => setMobileMenuOpen(false)}
@@ -200,8 +207,10 @@ export function Header() {
                                 <button
                                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                                     className="text-xl sm:text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-widest uppercase flex items-center gap-2 w-full"
+                                    aria-expanded={mobileServicesOpen}
+                                    aria-controls="mobile-services-list"
                                 >
-                                    SERVICES <Plus className={`w-5 h-5 text-primary transition-transform ${mobileServicesOpen ? 'rotate-45' : ''}`} />
+                                    SERVICES <Plus className={`w-5 h-5 text-primary transition-transform ${mobileServicesOpen ? 'rotate-45' : ''}`} aria-hidden="true" />
                                 </button>
 
                                 <AnimatePresence>
@@ -213,7 +222,7 @@ export function Header() {
                                             transition={{ duration: 0.3 }}
                                             className="overflow-hidden"
                                         >
-                                            <div className="pl-4 mt-4 space-y-3 border-l-2 border-primary/30">
+                                            <div id="mobile-services-list" className="pl-4 mt-4 space-y-3 border-l-2 border-primary/30">
                                                 {services.map((service) => (
                                                     <Link
                                                         key={service.slug}

@@ -12,8 +12,11 @@ import {
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Our Portfolio | SGO Construction",
-    description: "View our gallery of completed projects. See examples of our kitchen remodeling, bathroom renovations, and custom home additions.",
+    title: "Project Gallery | Kitchen, Bathroom & Deck Remodeling Photos | SGO Construction",
+    description: "Browse our portfolio of completed remodeling projects in Easton, Mansfield, and Norton, MA. See real before & after photos of kitchens, bathrooms, decks, siding, and more.",
+    alternates: {
+        canonical: "/gallery",
+    },
 }
 
 export default function GalleryPage() {

@@ -7,8 +7,11 @@ import { ChevronRight, Home } from "lucide-react"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Contact Us | SGO Construction",
-    description: "Get in touch with SGO Construction for your home remodeling needs. Request a consultation or estimate today.",
+    title: "Contact SGO Construction | Free Estimate for Home Remodeling in MA",
+    description: "Request a free, no-obligation estimate for your home remodeling project in Easton, Mansfield, Norton, or Taunton, MA. Call (774) 703-4084 or fill out our contact form.",
+    alternates: {
+        canonical: "/contact",
+    },
 }
 
 export default function ContactPage() {

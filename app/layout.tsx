@@ -120,9 +120,30 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content="#ffffff" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-673769621"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-673769621');
+          `}
+        </Script>
+      </head>
       <body
         className={`${poppins.variable} antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:text-sm focus:font-semibold"
+        >
+          Skip to main content
+        </a>
         <Script
           id="json-ld"
           type="application/ld+json"
@@ -130,7 +151,9 @@ export default function RootLayout({
         />
         <SmoothScrollProvider>
           <Header />
-          {children}
+          <div id="main-content">
+            {children}
+          </div>
           <Footer />
         </SmoothScrollProvider>
       </body>
