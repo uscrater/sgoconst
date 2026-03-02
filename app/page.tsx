@@ -13,8 +13,8 @@ import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { getGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
-  title: "Home Remodeling Contractors Easton & Mansfield MA | SGO Construction",
-  description: "Top-rated home remodeling in Easton, Mansfield & Norton, MA. Kitchen & bathroom renovations, decks, porches, siding, windows, doors, and home additions. Licensed & insured. Free estimates!",
+  title: "General Contractor Taunton, MA | Home Remodeling & Additions | SGO",
+  description: "Top-rated home remodeling contractor in Taunton, MA. Expert kitchen & bathroom remodeling, basement finishing, decks, siding, & windows. Licensed & insured. Free estimates!",
   alternates: {
     canonical: "./",
   },

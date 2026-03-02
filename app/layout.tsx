@@ -13,25 +13,25 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sgoconst.com"),
   title: {
-    default: "SGO Construction - Professional Home Remodeling in MA",
+    default: "General Contractor Taunton MA | Home Remodeling | SGO Construction",
     template: "%s | SGO Construction",
   },
-  description: "SGO Construction specializes in kitchen remodeling, bathroom renovations, decks, siding, and home additions in Easton, Mansfield, Norton, and Taunton, MA.",
+  description: "Expert general contractor in Taunton, MA offering kitchen & bathroom remodeling, basement finishing, decks, home additions, and siding installation. Free estimates!",
   keywords: [
-    "Home Remodeling",
-    "Kitchen Renovation",
-    "Bathroom Remodel",
-    "Deck Builders",
-    "Porches",
-    "Siding Installation",
-    "Window Replacement",
-    "Door Installation",
-    "Basement Finishing",
+    "General Contractor Taunton MA",
+    "Home remodeling contractor near me",
+    "Bathroom remodeler Taunton",
+    "Kitchen remodeling Taunton",
+    "Home additions Taunton MA",
+    "Basement finishing Taunton",
+    "Deck builder Taunton MA",
+    "Siding installation Taunton",
+    "Window replacement Taunton",
+    "Door installation Taunton",
     "Easton MA",
     "Mansfield MA",
     "Norton MA",
-    "Taunton MA",
-    "General Contractor"
+    "Raynham MA"
   ],
   alternates: {
     canonical: "./",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://sgoconst.com",
-    title: "SGO Construction - Professional Home Remodeling in MA",
-    description: "Expert kitchen remodeling, bathroom renovations, decks, and home construction services in Easton, Mansfield, Norton, and Taunton, MA.",
+    title: "General Contractor Taunton MA | Home Remodeling | SGO",
+    description: "Expert general contractor in Taunton, MA offering kitchen & bathroom remodeling, basement finishing, decks, and home additions.",
     siteName: "SGO Construction",
     images: [
       {
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SGO Construction - Professional Home Remodeling",
-    description: "Expert kitchen remodeling, bathroom renovations, and home construction services in Massachusetts.",
+    title: "General Contractor Taunton MA | SGO Construction",
+    description: "Expert home remodeling, kitchen & bathroom renovations, and home additions in Taunton, MA.",
     images: ["/og-image.png"],
   },
   robots: {

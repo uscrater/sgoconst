@@ -154,6 +154,13 @@ export function Header() {
                             </Link>
 
                             <Link
+                                href="/blog"
+                                className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                            >
+                                Blog
+                            </Link>
+
+                            <Link
                                 href="/contact"
                                 className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
                             >
@@ -247,10 +254,10 @@ export function Header() {
                             </div>
 
 
-                            {["ABOUT", "GALLERY", "FINANCING", "CONTACT"].map((link) => (
+                            {["ABOUT", "GALLERY", "FINANCING", "BLOG", "CONTACT"].map((link) => (
                                 <Link
                                     key={link}
-                                    href={link === "GALLERY" ? "/gallery" : link === "FINANCING" ? "/financing" : link === "CONTACT" ? "/contact" : `/${link.toLowerCase()}`}
+                                    href={link === "GALLERY" ? "/gallery" : link === "FINANCING" ? "/financing" : link === "CONTACT" ? "/contact" : link === "BLOG" ? "/blog" : `/${link.toLowerCase()}`}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="text-xl sm:text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-widest uppercase"
                                 >

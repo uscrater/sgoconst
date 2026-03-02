@@ -12,8 +12,9 @@ import {
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Project Gallery | Kitchen, Bathroom & Deck Remodeling Photos | SGO Construction",
-    description: "Browse our portfolio of completed remodeling projects in Easton, Mansfield, and Norton, MA. See real before & after photos of kitchens, bathrooms, decks, siding, and more.",
+    title: "Project Gallery | Home Remodeling Taunton MA | SGO",
+    description: "View our portfolio of home remodeling projects in Taunton, MA. See before and after photos of kitchen renovations, bathroom remodels, decks, and home additions.",
+    keywords: ["Home Remodeling Taunton MA pictures", "Kitchen remodeling before and after", "Bathroom remodel Taunton", "Deck contractor Taunton MA", "SGO Construction Gallery"],
     alternates: {
         canonical: "/gallery",
     },

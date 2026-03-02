@@ -7,8 +7,9 @@ import { ChevronRight, Home } from "lucide-react"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Contact SGO Construction | Free Estimate for Home Remodeling in MA",
-    description: "Request a free, no-obligation estimate for your home remodeling project in Easton, Mansfield, Norton, or Taunton, MA. Call (774) 703-4084 or fill out our contact form.",
+    title: "Contact SGO Construction | General Contractor Taunton MA",
+    description: "Get a free estimate from the top-rated home remodeling contractor in Taunton, MA. We specialize in kitchens, bathrooms, decks, and home additions. Call (774) 703-4084.",
+    keywords: ["General contractor Taunton MA contact", "Home remodeling estimate Taunton", "Basement finishing quote Taunton", "Deck contractor near me", "SGO Construction phone number"],
     alternates: {
         canonical: "/contact",
     },

@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: "Financing Options | SGO Construction",
-    description: "Explore flexible financing options for your home improvement project. Make your dream home a reality with our trusted financing partners.",
+    title: "Home Remodeling Financing Taunton MA | SGO Construction",
+    description: "Explore flexible financing options for your home remodeling, roof replacement, or siding project in Taunton, MA. Get affordable monthly payments with SGO Construction.",
+    keywords: ["Home remodeling financing Taunton MA", "General contractor payment plans", "Roof replacement financing", "Siding contractor financing near me"],
 }
 
 export default function FinancingLayout({

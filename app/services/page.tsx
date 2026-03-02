@@ -15,8 +15,8 @@ import {
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Home Remodeling Services in Easton & Mansfield, MA | SGO Construction",
-    description: "Full-service home remodeling in Massachusetts: kitchen & bathroom renovations, deck building, siding installation, window replacement, home additions, and basement finishing. Free estimates.",
+    title: "Home Remodeling & General Contractor Services in Taunton MA | SGO",
+    description: "Full-service general contractor in Taunton, MA: kitchen & bathroom remodeling, basement finishing, decks, siding, and home additions. Call for a free estimate!",
     alternates: {
         canonical: "/services",
     },
