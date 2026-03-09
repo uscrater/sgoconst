@@ -1,6 +1,108 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// Helper to generate dynamic email content based on service type
+function getServiceEmailContent(service: string) {
+    const serviceKey = service?.toLowerCase().replace(/\s+/g, '-') || '';
+
+    const serviceMap: Record<string, { description: string; bullets: string[] }> = {
+        'kitchen-remodeling': {
+            description: "I'd be happy to learn more about what you're planning. We handle kitchen remodeling projects from design coordination through full construction, always ensuring proper code compliance and quality execution.",
+            bullets: [
+                'Your vision for the kitchen layout and design',
+                'Approximate scope of the remodel',
+                'Timeline expectations',
+                'Any plans, photos, or ideas you may already have',
+            ],
+        },
+        'bathroom-remodeling': {
+            description: "I'd be happy to learn more about what you're planning. We handle bathroom remodeling projects from design coordination through full construction, always ensuring proper code compliance and quality execution.",
+            bullets: [
+                'Your vision for the bathroom layout and design',
+                'Approximate scope of the remodel',
+                'Timeline expectations',
+                'Any plans, photos, or ideas you may already have',
+            ],
+        },
+        'decks-and-porches': {
+            description: "I'd be happy to learn more about what you're planning. We build custom decks and porches from design coordination through full construction, always ensuring proper code compliance and quality execution.",
+            bullets: [
+                'The type of deck or porch you have in mind',
+                'Preferred materials (composite, wood, etc.)',
+                'Approximate size and layout',
+                'Timeline expectations',
+            ],
+        },
+        'siding': {
+            description: "I'd be happy to learn more about what you're planning. We handle siding projects from design coordination through full installation, always ensuring proper code compliance and quality execution.",
+            bullets: [
+                'The type of siding you\'re considering',
+                'Approximate scope of the project',
+                'Timeline expectations',
+                'Any preferences for materials or styles',
+            ],
+        },
+        'basement-renovations': {
+            description: "I'd be happy to learn more about what you're planning. We handle basement renovation projects from design coordination through full construction, always ensuring proper code compliance and quality execution.",
+            bullets: [
+                'Your vision for the basement space',
+                'Approximate scope of the renovation',
+                'Timeline expectations',
+                'Any plans or ideas you may already have',
+            ],
+        },
+        'home-addition': {
+            description: "I'd be happy to learn more about what you're planning. We specialize in home additions from design coordination and permitting through full construction, always ensuring proper code compliance and quality execution.",
+            bullets: [
+                'The type of addition you\'re considering',
+                'Approximate size and layout',
+                'Timeline expectations',
+                'Any plans or ideas you may already have',
+            ],
+        },
+        'gutters': {
+            description: "I'd be happy to learn more about what you need. We handle gutter installation and replacement projects with quality materials and professional workmanship.",
+            bullets: [
+                'The type of gutter work you need (installation, replacement, repair)',
+                'Approximate scope of the project',
+                'Timeline expectations',
+                'Any preferences for materials',
+            ],
+        },
+        'doors-and-windows': {
+            description: "I'd be happy to learn more about what you're planning. We handle door and window projects from selection through full installation, always ensuring proper code compliance and quality execution.",
+            bullets: [
+                'The type of work you need (doors, windows, or both)',
+                'Number of units to install or replace',
+                'Timeline expectations',
+                'Any preferences for materials or styles',
+            ],
+        },
+        'other': {
+            description: "I'd be happy to learn more about what you're planning. We handle a wide range of residential construction projects from design coordination through full construction, always ensuring proper code compliance and quality execution.",
+            bullets: [
+                'The scope of your project',
+                'Approximate size and requirements',
+                'Timeline expectations',
+                'Any plans or ideas you may already have',
+            ],
+        },
+    };
+
+    // Default/fallback content (neutral, works for any service)
+    const defaultContent = {
+        description: "I'd be happy to learn more about what you're planning. We handle residential construction projects from design coordination through full construction, always ensuring proper code compliance and quality execution.",
+        bullets: [
+            'The scope of your project',
+            'Approximate size and layout',
+            'Timeline expectations',
+            'Any plans or ideas you may already have',
+        ],
+    };
+
+    return serviceMap[serviceKey] || defaultContent;
+}
+
 export async function POST(request: Request) {
     try {
         console.log("Starting contact form submission...");
@@ -88,16 +190,13 @@ export async function POST(request: Request) {
                                 </p>
                                 
                                 <p style="color: #4b5563; line-height: 1.8; margin-bottom: 20px;">
-                                    I'd be happy to learn more about what you're planning. We specialize in residential additions from design coordination and permitting through full construction, always ensuring proper code compliance and quality execution.
+                                    ${getServiceEmailContent(service).description}
                                 </p>
                                 
                                 <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 25px 0;">
                                     <h3 style="color: #1f2937; margin-top: 0; margin-bottom: 15px; font-size: 16px;">The next step would be a quick call to better understand:</h3>
                                     <ul style="color: #4b5563; line-height: 1.8; margin: 0; padding-left: 20px;">
-                                        <li>The type of addition you're considering</li>
-                                        <li>Approximate size and layout</li>
-                                        <li>Timeline expectations</li>
-                                        <li>Any plans or ideas you may already have</li>
+                                        ${getServiceEmailContent(service).bullets.map(b => `<li>${b}</li>`).join('\n                                        ')}
                                     </ul>
                                 </div>
                                 
