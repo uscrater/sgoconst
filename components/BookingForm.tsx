@@ -20,7 +20,7 @@ import Link from "next/link"
 export function BookingForm({ className }: { className?: string }) {
     const [isLoading, setIsLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
-    const [termsAccepted, setTermsAccepted] = useState(false)
+    const [smsConsent, setSmsConsent] = useState<'yes' | 'no' | null>(null)
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -34,6 +34,7 @@ export function BookingForm({ className }: { className?: string }) {
             email: formData.get("email"),
             service: formData.get("service") || "not-specified",
             message: formData.get("message"),
+            smsConsent: smsConsent,
         }
 
         try {
@@ -156,9 +157,73 @@ export function BookingForm({ className }: { className?: string }) {
                 />
             </div>
 
+            {/* SMS Consent Section */}
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 space-y-4 mt-6">
+                <p className="text-sm text-gray-700 leading-relaxed">
+                    Do you agree to receive text messages from SGO Construction from phone number{" "}
+                    <span className="font-semibold">(774) 703-4084</span>?
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    Message frequency varies and may include appointment updates, project notifications,
+                    service reminders, estimates, billing updates, and customer support messages.
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    Message and data rates may apply. Opt-out at any time by replying STOP or CANCEL.
+                    For assistance, reply HELP or contact support at{" "}
+                    <a href="tel:7747034084" className="text-primary hover:underline font-medium">
+                        (774) 703-4084
+                    </a>.
+                </p>
+
+                <div className="space-y-3 mt-4">
+                    <div className="flex items-start space-x-3">
+                        <Checkbox
+                            id="sms-yes"
+                            name="sms-consent"
+                            checked={smsConsent === 'yes'}
+                            onCheckedChange={(checked) => checked && setSmsConsent('yes')}
+                            className="mt-1"
+                        />
+                        <label
+                            htmlFor="sms-yes"
+                            className="text-sm text-gray-700 leading-snug cursor-pointer"
+                        >
+                            Yes, I agree to receive text messages from SGO Construction from phone number (774) 703-4084.
+                        </label>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                        <Checkbox
+                            id="sms-no"
+                            name="sms-consent"
+                            checked={smsConsent === 'no'}
+                            onCheckedChange={(checked) => checked && setSmsConsent('no')}
+                            className="mt-1"
+                        />
+                        <label
+                            htmlFor="sms-no"
+                            className="text-sm text-gray-700 leading-snug cursor-pointer"
+                        >
+                            No, I do not agree to receive text messages from SGO Construction.
+                        </label>
+                    </div>
+                </div>
+
+                <p className="text-sm text-gray-600 mt-4">
+                    See our{" "}
+                    <Link
+                        href="/privacy-policy"
+                        className="text-primary hover:underline font-medium"
+                        target="_blank"
+                    >
+                        Privacy Policy
+                    </Link>
+                </p>
+            </div>
+
             <Button
                 type="submit"
-                disabled={isLoading || !termsAccepted}
+                disabled={isLoading || smsConsent === null}
                 variant="primary"
                 size="lg"
                 rounded="md"
@@ -176,23 +241,6 @@ export function BookingForm({ className }: { className?: string }) {
                     </>
                 )}
             </Button>
-
-            <div className="flex items-start space-x-2 mt-4">
-                <Checkbox
-                    id="terms"
-                    name="terms"
-                    checked={termsAccepted}
-                    onCheckedChange={(checked) => setTermsAccepted(checked === true)}
-                    required
-                    className="mt-1"
-                />
-                <label
-                    htmlFor="terms"
-                    className="text-sm text-gray-500 leading-snug cursor-pointer"
-                >
-                    I agree to the <Link href="/privacy-policy" className="text-primary hover:underline font-medium">privacy policy</Link> and consent to being contacted.
-                </label>
-            </div>
         </form>
     )
 }
