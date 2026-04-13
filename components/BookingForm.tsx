@@ -160,19 +160,23 @@ export function BookingForm({ className }: { className?: string }) {
             {/* SMS Consent Section */}
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 space-y-4 mt-6">
                 <p className="text-sm text-gray-700 leading-relaxed">
-                    Do you agree to receive text messages from SGO Construction from phone number{" "}
-                    <span className="font-semibold">(774) 703-4084</span>?
+                    SGO Construction Inc. would like your consent to send informational text message communications from{" "}
+                    <span className="font-semibold">(774) 703-4084</span> to your mobile number listed above, in response
+                    to your questions or to provide information relevant to your relationship with us.
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                    Message frequency varies and may include appointment updates, project notifications,
-                    service reminders, estimates, billing updates, and customer support messages.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    Message and data rates may apply. Opt-out at any time by replying STOP or CANCEL.
-                    For assistance, reply HELP or contact support at{" "}
-                    <a href="tel:7747034084" className="text-primary hover:underline font-medium">
-                        (774) 703-4084
-                    </a>.
+                    Consent is not a condition of purchase. Message frequency varies. Message and data rates may apply.
+                    Reply 'STOP' to unsubscribe at any time. Reply 'HELP' for assistance or more information.
+                    We do not share your mobile opt-in information with anyone. See our privacy policy and messaging
+                    terms and conditions at{" "}
+                    <Link href="/privacy-policy" className="text-primary hover:underline font-medium" target="_blank">
+                        sgoconst.com/privacy-policy
+                    </Link>
+                    {" "}and{" "}
+                    <Link href="/terms-and-conditions" className="text-primary hover:underline font-medium" target="_blank">
+                        sgoconst.com/terms-and-conditions
+                    </Link>
+                    {" "}for more information.
                 </p>
 
                 <div className="space-y-3 mt-4">
@@ -188,7 +192,7 @@ export function BookingForm({ className }: { className?: string }) {
                             htmlFor="sms-yes"
                             className="text-sm text-gray-700 leading-snug cursor-pointer"
                         >
-                            Yes, I agree to receive text messages from SGO Construction from phone number (774) 703-4084.
+                            Yes, I consent to receive informational messages from SGO Construction Inc.
                         </label>
                     </div>
 
@@ -204,19 +208,19 @@ export function BookingForm({ className }: { className?: string }) {
                             htmlFor="sms-no"
                             className="text-sm text-gray-700 leading-snug cursor-pointer"
                         >
-                            No, I do not agree to receive text messages from SGO Construction.
+                            No, I do not want to receive any text messages from SGO Construction Inc.
                         </label>
                     </div>
                 </div>
 
                 <p className="text-sm text-gray-600 mt-4">
                     See our{" "}
-                    <Link
-                        href="/privacy-policy"
-                        className="text-primary hover:underline font-medium"
-                        target="_blank"
-                    >
+                    <Link href="/privacy-policy" className="text-primary hover:underline font-medium" target="_blank">
                         Privacy Policy
+                    </Link>
+                    {" "}and{" "}
+                    <Link href="/terms-and-conditions" className="text-primary hover:underline font-medium" target="_blank">
+                        Terms & Conditions
                     </Link>
                 </p>
             </div>
