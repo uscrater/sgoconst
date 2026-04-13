@@ -20,7 +20,7 @@ export function TrustedCertified() {
                 </motion.div>
 
                 {/* Logos Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-center justify-center max-w-5xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 items-center justify-center max-w-5xl mx-auto">
 
                     {/* Trex Logo */}
                     <motion.div
@@ -66,6 +66,7 @@ export function TrustedCertified() {
                             className="max-h-16 w-auto object-contain"
                         />
                     </motion.div>
+
 
                 </div>
             </div>

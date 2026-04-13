@@ -59,6 +59,13 @@ export function About({ showButton = true }: AboutProps) {
                             <p className="text-4xl font-bold text-primary leading-none mb-1">10<span className="text-2xl">+</span></p>
                             <p className="text-[10px] font-bold uppercase tracking-wider text-gray-300">Years Experience</p>
                         </div>
+
+                        {/* BusinessRate Award Badge */}
+                        <div className="absolute -top-6 -left-6 bg-primary text-white px-5 py-4 rounded-lg shadow-2xl z-30 border-2 border-yellow-400">
+                            <p className="text-[9px] font-bold uppercase tracking-widest text-yellow-300 mb-1">★ BusinessRate Award</p>
+                            <p className="text-xl font-black leading-none">Best of 2026</p>
+                            <p className="text-[10px] text-white/70 uppercase tracking-wider mt-1">Taunton, MA</p>
+                        </div>
                     </div>
 
                     {/* Right Content */}
