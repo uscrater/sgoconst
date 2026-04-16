@@ -129,7 +129,7 @@ export async function POST(request: Request) {
         const body = await request.json();
         console.log("Received body:", body);
 
-        const { name, phone, email, service, message } = body;
+        const { name, phone, email, service, message, smsConsent } = body;
 
         // Validate required fields
         if (!name || !email || !message) {
@@ -165,6 +165,7 @@ export async function POST(request: Request) {
                     <p><strong>Email:</strong> ${email}</p>
                     <p><strong>Phone:</strong> ${phone}</p>
                     <p><strong>Service Interest:</strong> ${service}</p>
+                    <p><strong>SMS Consent:</strong> ${smsConsent === 'yes' ? '✅ Yes – consented to receive text messages' : '❌ No – did not consent to text messages'}</p>
                     <hr />
                     <h3>Message:</h3>
                     <p>${message}</p>
