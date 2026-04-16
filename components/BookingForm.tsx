@@ -36,6 +36,7 @@ export function BookingForm({ className }: { className?: string }) {
             service: formData.get("service") || "not-specified",
             message: formData.get("message"),
             smsConsent: smsConsent,
+            ageConfirmed: ageConfirmed,
         }
 
         try {
