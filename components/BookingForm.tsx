@@ -21,6 +21,7 @@ export function BookingForm({ className }: { className?: string }) {
     const [isLoading, setIsLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
     const [smsConsent, setSmsConsent] = useState<'yes' | 'no' | null>(null)
+    const [ageConfirmed, setAgeConfirmed] = useState(false)
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -165,10 +166,13 @@ export function BookingForm({ className }: { className?: string }) {
                     to your questions or to provide information relevant to your relationship with us.
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                    Consent is not a condition of purchase. Message frequency varies. Message and data rates may apply.
-                    Reply 'STOP' to unsubscribe at any time. Reply 'HELP' for assistance or more information.
-                    We do not share your mobile opt-in information with anyone. See our privacy policy and messaging
-                    terms and conditions at{" "}
+                    By signing up, you agree to receive SMS messages from SGO Construction related to project updates,
+                    appointment reminders, customer support, and service-related notifications.
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                    Message frequency varies. Message and data rates may apply. Reply 'STOP' to unsubscribe at any time.
+                    Reply 'HELP' for assistance or more information. We do not share your mobile opt-in information with anyone.
+                    Consent is not a condition of purchase. See our privacy policy and messaging terms and conditions at{" "}
                     <Link href="/privacy-policy" className="text-primary hover:underline font-medium" target="_blank">
                         sgoconst.com/privacy-policy
                     </Link>
@@ -182,16 +186,25 @@ export function BookingForm({ className }: { className?: string }) {
                 <div className="space-y-3 mt-4">
                     <div className="flex items-start space-x-3">
                         <Checkbox
+                            id="age-confirm"
+                            checked={ageConfirmed}
+                            onCheckedChange={(checked) => setAgeConfirmed(!!checked)}
+                            className="mt-1"
+                        />
+                        <label htmlFor="age-confirm" className="text-sm text-gray-700 leading-snug cursor-pointer">
+                            By providing my phone number and opting in to receive SMS messages, I confirm that I am at least 18 years old and legally permitted to consent to receive text messages.
+                        </label>
+                    </div>
+
+                    <div className="flex items-start space-x-3">
+                        <Checkbox
                             id="sms-yes"
                             name="sms-consent"
                             checked={smsConsent === 'yes'}
                             onCheckedChange={(checked) => checked && setSmsConsent('yes')}
                             className="mt-1"
                         />
-                        <label
-                            htmlFor="sms-yes"
-                            className="text-sm text-gray-700 leading-snug cursor-pointer"
-                        >
+                        <label htmlFor="sms-yes" className="text-sm text-gray-700 leading-snug cursor-pointer">
                             Yes, I consent to receive informational messages from SGO Construction Inc.
                         </label>
                     </div>
@@ -204,10 +217,7 @@ export function BookingForm({ className }: { className?: string }) {
                             onCheckedChange={(checked) => checked && setSmsConsent('no')}
                             className="mt-1"
                         />
-                        <label
-                            htmlFor="sms-no"
-                            className="text-sm text-gray-700 leading-snug cursor-pointer"
-                        >
+                        <label htmlFor="sms-no" className="text-sm text-gray-700 leading-snug cursor-pointer">
                             No, I do not want to receive any text messages from SGO Construction Inc.
                         </label>
                     </div>

@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
                         SGO Construction Inc.
                     </p>
                     <p className="text-gray-400 mt-2">
-                        Last updated: April 14, 2026
+                        Last updated: April 16, 2026
                     </p>
                 </div>
 
@@ -36,6 +36,10 @@ export default function PrivacyPolicyPage() {
                     {/* Data Collection */}
                     <section>
                         <h2 className="text-2xl font-bold text-foreground mb-4">Data Collection</h2>
+                        <p className="mb-4">
+                            By providing your phone number and opting in to receive SMS messages, you confirm that you are
+                            at least 18 years old and legally permitted to consent to receive text messages.
+                        </p>
                         <p className="mb-4">By opting into our SMS messaging service, you agree to the terms described in this policy. We may collect personal information that you voluntarily provide, including:</p>
                         <ul className="list-disc pl-6 space-y-2">
                             <li>Name</li>
@@ -55,26 +59,38 @@ export default function PrivacyPolicyPage() {
                     {/* Data Usage */}
                     <section>
                         <h2 className="text-2xl font-bold text-foreground mb-4">Data Usage</h2>
-                        <p className="mb-4">We use your information solely to provide and improve our services, including:</p>
+                        <p className="mb-4">
+                            By opting in, you agree to receive SMS messages from SGO Construction related to project
+                            updates, appointment reminders, customer support, and service-related notifications. The contacts may include:
+                        </p>
                         <ul className="list-disc pl-6 space-y-2">
-                            <li>Communicating with you about your project</li>
-                            <li>Providing estimates, updates, and service notifications</li>
-                            <li>Scheduling appointments</li>
+                            <li>Communicating with you about your project and updates</li>
+                            <li>Providing estimates and service-related notifications</li>
+                            <li>Scheduling appointments and reminders</li>
                             <li>Sending invoices and payment reminders</li>
                             <li>Responding to inquiries and offering customer support</li>
-                            <li>Sending SMS messages related to: appointment scheduling, project updates, service notifications, estimates, billing reminders, and customer support</li>
+                            <li>Account alerts</li>
                         </ul>
-                        <p className="mt-4">
-                            We do <strong>not</strong> use your information for unrelated marketing without your consent.
-                        </p>
+                    </section>
+
+                    {/* Data Sharing */}
+                    <section>
+                        <h2 className="text-2xl font-bold text-foreground mb-4">Data Sharing</h2>
+                        <div className="bg-gray-50 border-l-4 border-primary p-6 rounded-r-lg">
+                            <p>
+                                We do not sell or share your personal information or SMS consent with third parties except as
+                                necessary to provide services (for example, scheduling or messaging providers) or as required by law.
+                            </p>
+                        </div>
                     </section>
 
                     {/* Data Security */}
                     <section>
                         <h2 className="text-2xl font-bold text-foreground mb-4">Data Security</h2>
                         <p>
-                            We implement administrative, technical, and physical safeguards designed to protect your
-                            information from unauthorized access, disclosure, alteration, or destruction.
+                            We maintain administrative, technical, and physical safeguards to prevent unauthorized access,
+                            use, or disclosure of personal information. Access to consumer data is limited to authorized
+                            personnel only, and we do not permit external organizations to access or use SMS opt-in data.
                         </p>
                     </section>
 
@@ -157,7 +173,7 @@ export default function PrivacyPolicyPage() {
                                 All SMS consent information is used exclusively for communication between you and SGO Construction.
                             </p>
                             <p className="font-semibold text-foreground">
-                                Opt-in information is never shared with anyone for any purpose.
+                                Opt-in information is <strong>never shared with anyone for any purpose</strong>.
                             </p>
                         </div>
                     </section>
