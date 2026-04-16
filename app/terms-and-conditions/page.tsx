@@ -40,6 +40,23 @@ export default function TermsAndConditionsPage() {
                         </ul>
                     </section>
 
+                    {/* Data Usage */}
+                    <section>
+                        <h2 className="text-2xl font-bold text-foreground mb-4">Data Usage</h2>
+                        <p className="mb-4">
+                            We use your information solely to provide and improve our services, types of messages may include:
+                        </p>
+                        <ul className="list-disc pl-6 space-y-2 mb-4">
+                            <li>Communicating with you about your project</li>
+                            <li>Providing estimates, updates, and service notifications</li>
+                            <li>Scheduling appointments</li>
+                            <li>Sending invoices and payment reminders</li>
+                            <li>Responding to inquiries and offering customer support</li>
+                            <li>Sending SMS messages related to: appointment scheduling and reminders, project updates, service notifications, estimates, billing reminders, account alerts, promotional offers and customer support</li>
+                        </ul>
+                        <p>We do not use your information for unrelated marketing without your consent.</p>
+                    </section>
+
                     {/* Opt-In */}
                     <section>
                         <h2 className="text-2xl font-bold text-foreground mb-4">Opt-In Instructions</h2>
