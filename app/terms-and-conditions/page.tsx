@@ -18,7 +18,7 @@ export default function TermsAndConditionsPage() {
                         SGO Construction Inc. — SMS Communications
                     </p>
                     <p className="text-gray-400 mt-2">
-                        Last updated: April 10, 2026
+                        Last updated: April 16, 2026
                     </p>
                 </div>
 
@@ -44,11 +44,25 @@ export default function TermsAndConditionsPage() {
                     <section>
                         <h2 className="text-2xl font-bold text-foreground mb-4">Opt-In Instructions</h2>
                         <p className="mb-4">
-                            By providing your mobile phone number—whether through our website forms, email, SMS, phone calls,
-                            contracts, or third-party platforms—you expressly opt in to receive SMS messages from SGO Construction.
+                            You may opt in by providing your mobile number and explicitly agreeing to receive SMS messages
+                            through our website forms, email, SMS, phone calls, contracts, third-party platforms.
+                            Simply providing your phone number does not constitute consent.
                         </p>
                         <p className="mb-4">
-                            You may also initiate communication by sending <strong>START</strong> or <strong>JOIN</strong>.
+                            You may also initiate communication by sending the keywords <strong>START</strong> or <strong>JOIN</strong>.
+                        </p>
+                        <p className="mb-4">
+                            You will receive informational messages about SGO Construction Inc. services.
+                        </p>
+                        <p className="mb-4">
+                            See our Privacy Policy and Terms and Conditions:{" "}
+                            <a href="https://www.sgoconst.com/privacy-policy" className="text-primary hover:underline" target="_blank">
+                                https://www.sgoconst.com/privacy-policy
+                            </a>
+                            {" "}and{" "}
+                            <a href="https://www.sgoconst.com/terms-and-conditions" className="text-primary hover:underline" target="_blank">
+                                https://www.sgoconst.com/terms-and-conditions
+                            </a>
                         </p>
                         <p>
                             Your consent to receive SMS messages is <strong>not a condition of purchase</strong>.
