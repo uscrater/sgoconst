@@ -18,7 +18,7 @@ export default function TermsAndConditionsPage() {
                         SGO Construction Inc. — SMS Communications
                     </p>
                     <p className="text-gray-400 mt-2">
-                        Last updated: April 16, 2026
+                        Last updated: April 14, 2026
                     </p>
                 </div>
 
