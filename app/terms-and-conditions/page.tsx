@@ -18,7 +18,7 @@ export default function TermsAndConditionsPage() {
                         SGO Construction Inc. — SMS Communications
                     </p>
                     <p className="text-gray-400 mt-2">
-                        Last updated: April 14, 2026
+                        Last updated: April 22, 2026
                     </p>
                 </div>
 
@@ -35,7 +35,7 @@ export default function TermsAndConditionsPage() {
                                 <a href="tel:7747034084" className="text-primary hover:underline">(774) 703-4084</a>
                                 {" "}or{" "}
                                 <a href="mailto:info@sgoconst.com" className="text-primary hover:underline">info@sgoconst.com</a>
-                                {" "}for <strong>HELP</strong> or to <strong>STOP</strong> receiving messages.
+                                {" "}for <strong>HELP</strong> or send an SMS containing <strong>STOP</strong> or <strong>CANCEL</strong> to stop receiving messages.
                             </li>
                         </ul>
                     </section>
@@ -43,19 +43,12 @@ export default function TermsAndConditionsPage() {
                     {/* Data Usage */}
                     <section>
                         <h2 className="text-2xl font-bold text-foreground mb-4">Data Usage</h2>
-                        <p className="mb-4">
-                            By opting in, you agree to receive SMS messages from SGO Construction related to project
-                            updates, appointment reminders, customer support, and service-related notifications. The contacts may include:
+                        <p>
+                            By opting in, you agree to receive service-related informational SMS messages from SGO
+                            Construction related to project updates, appointment reminders, customer service
+                            communications, estimates, billing reminders and service notifications. The opt-in checkbox
+                            is never pre-selected. You must actively provide your consent before receiving SMS messages.
                         </p>
-                        <ul className="list-disc pl-6 space-y-2 mb-4">
-                            <li>Communicating with you about your project and updates</li>
-                            <li>Providing estimates and service-related notifications</li>
-                            <li>Scheduling appointments and reminders</li>
-                            <li>Sending invoices and payment reminders</li>
-                            <li>Responding to inquiries and offering customer support</li>
-                            <li>Account alerts</li>
-                        </ul>
-                        <p>We do not use your information for unrelated marketing without your consent.</p>
                     </section>
 
                     {/* Opt-In */}
@@ -63,21 +56,21 @@ export default function TermsAndConditionsPage() {
                         <h2 className="text-2xl font-bold text-foreground mb-4">Opt-In Instructions</h2>
                         <p className="mb-4">
                             You may opt in by providing your mobile number and explicitly agreeing to receive SMS messages
-                            through our website forms, email, SMS, phone calls, contracts, third-party platforms.
-                            Simply providing your phone number does not constitute consent.
+                            through our website forms, email, SMS, phone calls, contracts, third-party platforms. Simply
+                            providing your phone number does not constitute consent.
                         </p>
                         <p className="mb-4">
                             You may also initiate communication by sending the keywords <strong>START</strong> or <strong>JOIN</strong>.
-                        </p>
-                        <p className="mb-4">
                             You will receive informational messages about SGO Construction Inc. services.
                         </p>
-                        <p className="mb-4">
-                            See our Privacy Policy and Terms and Conditions:{" "}
+                        <p className="mb-2">
+                            See our Privacy Policy at{" "}
                             <a href="https://www.sgoconst.com/privacy-policy" className="text-primary hover:underline" target="_blank">
                                 https://www.sgoconst.com/privacy-policy
                             </a>
-                            {" "}and{" "}
+                        </p>
+                        <p className="mb-4">
+                            See our Terms and Conditions at{" "}
                             <a href="https://www.sgoconst.com/terms-and-conditions" className="text-primary hover:underline" target="_blank">
                                 https://www.sgoconst.com/terms-and-conditions
                             </a>
@@ -108,21 +101,38 @@ export default function TermsAndConditionsPage() {
                         <h2 className="text-2xl font-bold text-foreground mb-4">Non-Sharing of SMS Data</h2>
                         <div className="bg-gray-50 border-l-4 border-primary p-6 rounded-r-lg">
                             <p className="mb-3">
-                                SGO Construction does not sell, rent, or share mobile numbers or SMS opt-in data with third
+                                SGO Construction does <strong>not</strong> sell, rent, or share mobile numbers or SMS opt-in data with third
                                 parties for marketing purposes.
                             </p>
                             <p className="mb-3">
                                 All SMS consent information is used exclusively for communication between you and SGO Construction.
                             </p>
                             <p className="font-semibold text-foreground">
-                                Opt-in information is never shared with anyone for any purpose.
+                                Opt-in information is <strong>never shared with anyone for any purpose</strong>.
                             </p>
                         </div>
                     </section>
 
+                    {/* Your Rights */}
+                    <section>
+                        <h2 className="text-2xl font-bold text-foreground mb-4">Your Rights</h2>
+                        <p className="mb-4">You may request:</p>
+                        <ul className="list-disc pl-6 space-y-2">
+                            <li>Access to your personal information</li>
+                            <li>Corrections or updates</li>
+                            <li>Deletion of your data</li>
+                            <li>Details about how your information is used</li>
+                        </ul>
+                        <p className="mt-4">To make a request, contact us using the information below.</p>
+                    </section>
+
                     {/* Contact */}
                     <section>
-                        <h2 className="text-2xl font-bold text-foreground mb-4">Contact Information</h2>
+                        <h2 className="text-2xl font-bold text-foreground mb-4">Access, Updates & Contact Information</h2>
+                        <p className="mb-4">
+                            If you have questions about this Privacy Policy or need additional details about our privacy
+                            practices, please contact us:
+                        </p>
                         <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
                             <ul className="space-y-2">
                                 <li>
@@ -147,13 +157,12 @@ export default function TermsAndConditionsPage() {
                         </div>
                     </section>
 
-                    {/* Privacy Policy link */}
+                    {/* Changes */}
                     <section>
-                        <p className="text-gray-600">
-                            For full details on how we collect and use your data, see our{" "}
-                            <a href="/privacy-policy" className="text-primary hover:underline font-medium">
-                                Privacy Policy
-                            </a>.
+                        <h2 className="text-2xl font-bold text-foreground mb-4">Changes to This Privacy Policy</h2>
+                        <p>
+                            We may update this Privacy Policy periodically to reflect changes in our practices or legal
+                            requirements. Any updates will be posted on this page with a revised effective date.
                         </p>
                     </section>
 
