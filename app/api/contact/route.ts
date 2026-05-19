@@ -129,7 +129,7 @@ export async function POST(request: Request) {
         const body = await request.json();
         console.log("Received body:", body);
 
-        const { name, phone, email, service, message, smsConsent, ageConfirmed } = body;
+        const { name, phone, email, zipcode, service, message, smsConsent } = body;
 
         // Validate required fields
         if (!name || !email || !message) {
@@ -164,9 +164,9 @@ export async function POST(request: Request) {
                     <p><strong>Name:</strong> ${name}</p>
                     <p><strong>Email:</strong> ${email}</p>
                     <p><strong>Phone:</strong> ${phone}</p>
+                    <p><strong>Zip Code:</strong> ${zipcode || 'Not provided'}</p>
                     <p><strong>Service Interest:</strong> ${service}</p>
-                    <p><strong>SMS Consent:</strong> ${smsConsent === 'yes' ? '✅ Yes – consented to receive text messages' : '❌ No – did not consent to text messages'}</p>
-                    <p><strong>Age Confirmed (18+):</strong> ${ageConfirmed ? '✅ Yes – confirmed 18 or older' : '❌ Not confirmed'}</p>
+                    <p><strong>SMS Consent:</strong> ${smsConsent ? '✅ Yes – consented to receive messages' : '❌ No – did not consent'}</p>
                     <hr />
                     <h3>Message:</h3>
                     <p>${message}</p>
@@ -175,6 +175,27 @@ export async function POST(request: Request) {
 
             const companyEmailResult = await transporter.sendMail(companyMailOptions);
             console.log("Company notification sent:", companyEmailResult);
+
+            // 1b. Send lead to GHL webhook
+            try {
+                await fetch('https://services.leadconnectorhq.com/hooks/XucHHWKkt996tJL9FSLD/webhook-trigger/Yj07R5Oop091cppg4x7R', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        fullName: name,
+                        phone,
+                        email,
+                        postalCode: zipcode || '',
+                        service,
+                        message,
+                        smsConsent,
+                        source: 'Website Contact Form',
+                    }),
+                });
+                console.log("GHL webhook sent successfully");
+            } catch (ghlError) {
+                console.error("GHL webhook failed (non-blocking):", ghlError);
+            }
 
             // 2. Send automatic follow-up email to user
             try {

@@ -20,8 +20,7 @@ import Link from "next/link"
 export function BookingForm({ className }: { className?: string }) {
     const [isLoading, setIsLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
-    const [smsConsent, setSmsConsent] = useState<'yes' | 'no' | null>(null)
-    const [ageConfirmed, setAgeConfirmed] = useState(false)
+    const [smsConsent, setSmsConsent] = useState(false)
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -33,10 +32,10 @@ export function BookingForm({ className }: { className?: string }) {
             name: formData.get("name"),
             phone: formData.get("phone"),
             email: formData.get("email"),
+            zipcode: formData.get("zipcode"),
             service: formData.get("service") || "not-specified",
             message: formData.get("message"),
             smsConsent: smsConsent,
-            ageConfirmed: ageConfirmed,
         }
 
         try {
@@ -132,6 +131,26 @@ export function BookingForm({ className }: { className?: string }) {
             </div>
 
             <div className="space-y-2">
+                <label htmlFor="zipcode" className="text-sm font-semibold text-foreground">Zip Code</label>
+                <Input
+                    id="zipcode"
+                    name="zipcode"
+                    required
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    maxLength={10}
+                    placeholder="02101"
+                    onKeyDown={(e) => {
+                        if (!/[0-9]/.test(e.key) && !['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+                            e.preventDefault()
+                        }
+                    }}
+                    className="bg-white border-gray-300 text-foreground placeholder:text-gray-400 focus:border-primary focus:ring-primary h-12"
+                />
+            </div>
+
+            <div className="space-y-2">
                 <label htmlFor="service" className="text-sm font-semibold text-foreground">Service Interested In</label>
                 <Select required name="service">
                     <SelectTrigger id="service" className="h-12 bg-white border-gray-300" aria-label="Select a service">
@@ -159,98 +178,24 @@ export function BookingForm({ className }: { className?: string }) {
                 />
             </div>
 
-            {/* SMS Consent Section */}
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 space-y-4 mt-6">
-                <p className="text-sm text-gray-700 leading-relaxed">
-                    SGO Construction Inc. would like your consent to send informational SMS messages from{" "}
-                    <span className="font-semibold">(774) 703-4084</span> to your mobile number listed above, in response
-                    to your questions or to provide information relevant to your relationship with us.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    By opting in, you agree to receive service-related informational SMS messages from SGO Construction
-                    related to project updates, appointment reminders, customer service communications, estimates,
-                    billing reminders and service notifications. The opt-in checkbox is never pre-selected. You must
-                    actively provide your consent before receiving SMS messages.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    We do not transfer, share, disclose, or provide consumer data, including SMS opt-in data and
-                    personal information, to any external organizations for any purpose or any other independent use,
-                    even with user consent, except where required by law.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                    Message frequency varies. Message and data rates may apply. Reply 'STOP' to unsubscribe at any time.
-                    Reply 'HELP' for help or more information. We do not share your mobile opt-in information with anyone.
-                    Consent is not a condition of purchase. See our Privacy Policy at{" "}
-                    <Link href="/privacy-policy" className="text-primary hover:underline font-medium" target="_blank">
-                        https://www.sgoconst.com/privacy-policy
-                    </Link>
-                    {" "}and Terms and Conditions at{" "}
-                    <Link href="/terms-and-conditions" className="text-primary hover:underline font-medium" target="_blank">
-                        https://www.sgoconst.com/terms-and-conditions
-                    </Link>
-                    {" "}for more information.
-                </p>
-
-                <div className="space-y-3 mt-4">
-                    <div className="flex items-start space-x-3">
-                        <Checkbox
-                            id="age-confirm"
-                            checked={ageConfirmed}
-                            onCheckedChange={(checked) => setAgeConfirmed(!!checked)}
-                            className="mt-1"
-                        />
-                        <label htmlFor="age-confirm" className="text-sm text-gray-700 leading-snug cursor-pointer">
-                            By providing my phone number and opting in to receive SMS messages, I confirm that I am at least 18 years old and legally permitted to consent to receive text messages.
-                        </label>
-                    </div>
-
-                    <div className="flex items-start space-x-3">
-                        <Checkbox
-                            id="sms-yes"
-                            name="sms-consent"
-                            checked={smsConsent === 'yes'}
-                            onCheckedChange={(checked) => checked && setSmsConsent('yes')}
-                            className="mt-1"
-                        />
-                        <label htmlFor="sms-yes" className="text-sm text-gray-700 leading-snug cursor-pointer">
-                            Yes, I consent to receive informational messages from SGO Construction Inc.
-                        </label>
-                    </div>
-
-                    <div className="flex items-start space-x-3">
-                        <Checkbox
-                            id="sms-no"
-                            name="sms-consent"
-                            checked={smsConsent === 'no'}
-                            onCheckedChange={(checked) => checked && setSmsConsent('no')}
-                            className="mt-1"
-                        />
-                        <label htmlFor="sms-no" className="text-sm text-gray-700 leading-snug cursor-pointer">
-                            No, I do not want to receive any text messages from SGO Construction Inc.
-                        </label>
-                    </div>
-                </div>
-
-                <p className="text-sm text-gray-600 leading-relaxed mt-4">
-                    By checking <strong>YES</strong>, you agree to receive recurring informational SMS messages from SGO
-                    Construction Inc. You will receive a confirmation message after opting in.
-                </p>
-
-                <p className="text-sm text-gray-600 mt-2">
-                    See our{" "}
-                    <Link href="/privacy-policy" className="text-primary hover:underline font-medium" target="_blank">
-                        Privacy Policy
-                    </Link>
-                    {" "}and{" "}
-                    <Link href="/terms-and-conditions" className="text-primary hover:underline font-medium" target="_blank">
-                        Terms & Conditions
-                    </Link>
-                </p>
+            {/* SMS Consent */}
+            <div className="flex items-start space-x-3">
+                <Checkbox
+                    id="sms-consent"
+                    checked={smsConsent}
+                    onCheckedChange={(checked) => setSmsConsent(!!checked)}
+                    className="mt-1"
+                />
+                <label htmlFor="sms-consent" className="text-sm text-gray-600 leading-snug cursor-pointer">
+                    I agree to receive informational messages and calls from SGO Construction, including appointment
+                    reminders and welcome messages. I understand I am not required to consent as a condition of purchase.
+                    Reply STOP to opt out at any time.
+                </label>
             </div>
 
             <Button
                 type="submit"
-                disabled={isLoading || smsConsent === null}
+                disabled={isLoading}
                 variant="primary"
                 size="lg"
                 rounded="md"
@@ -268,6 +213,12 @@ export function BookingForm({ className }: { className?: string }) {
                     </>
                 )}
             </Button>
+
+            <p className="text-center text-sm" style={{ color: '#8B0D0D' }}>
+                <Link href="/privacy-policy" className="hover:underline" target="_blank">Privacy Policy</Link>
+                {" | "}
+                <Link href="/terms-and-conditions" className="hover:underline" target="_blank">Terms & Conditions</Link>
+            </p>
         </form>
     )
 }
