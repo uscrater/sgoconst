@@ -2,6 +2,7 @@ import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react"
 import Link from "next/link"
 
 export function Footer() {
+    // trigger deploy
     return (
         <footer className="bg-white text-foreground pt-16 pb-8 border-t border-gray-200">
             <div className="container mx-auto px-4">
