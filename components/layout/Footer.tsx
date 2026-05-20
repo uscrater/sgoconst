@@ -40,8 +40,9 @@ export function Footer() {
                         </ul>
                     </nav>
 
-                    {/* Contact */}
-                    <div>
+                    {/* Contact section  */}
+                    <div> 
+                        
                         <h4 className="text-lg font-bold mb-6">Contact Info</h4>
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4">
