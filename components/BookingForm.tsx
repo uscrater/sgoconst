@@ -55,6 +55,9 @@ export function BookingForm({ className }: { className?: string }) {
             }
 
             setIsSuccess(true)
+            if (typeof window !== "undefined" && (window as any).fbq) {
+                (window as any).fbq("track", "Lead")
+            }
         } catch (error) {
             console.error("Error submitting form:", error)
             alert("Something went wrong. Please try again.")
