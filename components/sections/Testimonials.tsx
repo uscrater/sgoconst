@@ -2,6 +2,7 @@
 
 import { Star } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { GoogleReviewsData } from "@/lib/google-reviews"
 
 const mockReviews = [
@@ -67,6 +68,12 @@ export function Testimonials({ googleData }: TestimonialsProps) {
                         <span className="text-xl font-bold">{rating.toFixed(1)}</span>
                     </div>
                     <p className="text-gray-600">Based on {totalReviews}+ Google Reviews</p>
+                </div>
+
+                <div className="flex items-center justify-center gap-10 mb-16 flex-wrap">
+                    <Image src="/google-5-star-v2.png" alt="Google 5 Star" width={150} height={75} className="object-contain" />
+                    <Image src="/licensed-and-insured.jpg" alt="Licensed & Insured" width={170} height={75} className="object-contain" />
+                    <Image src="/google-guaranteed.png" alt="Google Guaranteed" width={170} height={75} className="object-contain" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
