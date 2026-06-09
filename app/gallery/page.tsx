@@ -10,6 +10,7 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Metadata } from "next"
+import { getInstagramPosts } from "@/lib/instagram"
 
 export const metadata: Metadata = {
     title: "Project Gallery | Home Remodeling Taunton MA | SGO",
@@ -20,7 +21,9 @@ export const metadata: Metadata = {
     },
 }
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+    const instagramPosts = await getInstagramPosts()
+
     return (
         <main className="bg-white min-h-screen">
             <PageHero
@@ -43,6 +46,7 @@ export default function GalleryPage() {
             </PageHero>
 
             <InstagramGallery
+                posts={instagramPosts}
                 title={
                     <>
                         Our <span className="text-primary">Portfolio</span>
