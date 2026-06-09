@@ -46,7 +46,8 @@ export default async function GalleryPage() {
             </PageHero>
 
             <InstagramGallery
-                posts={instagramPosts}
+                posts={instagramPosts?.posts}
+                nextCursor={instagramPosts?.nextCursor}
                 title={
                     <>
                         Our <span className="text-primary">Portfolio</span>

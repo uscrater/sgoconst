@@ -7,7 +7,12 @@ export interface InstagramPost {
     thumbnail_url?: string;
 }
 
-export async function getInstagramPosts(): Promise<InstagramPost[] | null> {
+export interface InstagramResult {
+    posts: InstagramPost[];
+    nextCursor: string | null;
+}
+
+export async function getInstagramPosts(cursor?: string): Promise<InstagramResult | null> {
     const token = process.env.INSTAGRAM_ACCESS_TOKEN;
     const igUserId = process.env.INSTAGRAM_USER_ID;
 
@@ -16,11 +21,12 @@ export async function getInstagramPosts(): Promise<InstagramPost[] | null> {
         return null;
     }
 
-    const url = `https://graph.facebook.com/v20.0/${igUserId}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${token}&limit=9`;
+    let url = `https://graph.facebook.com/v20.0/${igUserId}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${token}&limit=18`;
+    if (cursor) url += `&after=${cursor}`;
 
     try {
         const res = await fetch(url, {
-            next: { revalidate: 3600 } // Revalidar a cada 1 hora (cache)
+            next: { revalidate: 3600 }
         });
 
         if (!res.ok) {
@@ -28,7 +34,10 @@ export async function getInstagramPosts(): Promise<InstagramPost[] | null> {
         }
 
         const data = await res.json();
-        return data.data as InstagramPost[];
+        return {
+            posts: data.data as InstagramPost[],
+            nextCursor: data.paging?.cursors?.after ?? null,
+        };
     } catch (error) {
         console.error("Error fetching Instagram posts:", error);
         return null;
