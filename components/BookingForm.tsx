@@ -237,7 +237,7 @@ export function BookingForm({ className }: { className?: string }) {
                             className="mt-1"
                         />
                         <label htmlFor="sms-yes" className="text-sm text-gray-700 leading-snug cursor-pointer">
-                            Yes, I consent to receive informational messages from SGO Construction Inc.
+                            Yes, I consent to receive informational messages from SGO Construction Inc sent from (774) 703-4084
                         </label>
                     </div>
 
