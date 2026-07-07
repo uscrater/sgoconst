@@ -129,7 +129,7 @@ export async function POST(request: Request) {
         const body = await request.json();
         console.log("Received body:", body);
 
-        const { name, phone, email, zipcode, service, message, smsConsent } = body;
+        const { name, phone, email, zipcode, service, message, smsConsent, ageConfirmed } = body;
 
         // Validate required fields
         if (!name || !email || !message) {
@@ -167,6 +167,7 @@ export async function POST(request: Request) {
                     <p><strong>Zip Code:</strong> ${zipcode || 'Not provided'}</p>
                     <p><strong>Service Interest:</strong> ${service}</p>
                     <p><strong>SMS Consent:</strong> ${smsConsent ? '✅ Yes – consented to receive messages' : '❌ No – did not consent'}</p>
+                    <p><strong>Age Confirmed (18+):</strong> ${ageConfirmed ? '✅ Yes' : '❌ No'}</p>
                     <hr />
                     <h3>Message:</h3>
                     <p>${message}</p>
@@ -189,6 +190,7 @@ export async function POST(request: Request) {
                         service,
                         message,
                         smsConsent,
+                        ageConfirmed,
                         source: 'Website Contact Form',
                     }),
                 });
