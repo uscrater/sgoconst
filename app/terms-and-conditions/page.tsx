@@ -59,10 +59,6 @@ export default function TermsAndConditionsPage() {
                             through our website forms, email, SMS, phone calls, contracts, third-party platforms. Simply
                             providing your phone number does not constitute consent.
                         </p>
-                        <p className="mb-4">
-                            You may also initiate communication by sending the keywords <strong>START</strong> or <strong>JOIN</strong>.
-                            You will receive informational messages about SGO Construction Inc. services.
-                        </p>
                         <p className="mb-2">
                             See our Privacy Policy at{" "}
                             <a href="https://www.sgoconst.com/privacy-policy" className="text-primary hover:underline" target="_blank">
