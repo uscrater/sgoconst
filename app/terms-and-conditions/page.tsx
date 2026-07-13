@@ -56,7 +56,7 @@ export default function TermsAndConditionsPage() {
                         <h2 className="text-2xl font-bold text-foreground mb-4">Opt-In Instructions</h2>
                         <p className="mb-4">
                             You may opt in by providing your mobile number and explicitly agreeing to receive SMS messages
-                            through our website forms, email, SMS, phone calls, contracts, third-party platforms. Simply
+                            through our website forms, email, SMS, contracts, third-party platforms. Simply
                             providing your phone number does not constitute consent.
                         </p>
                         <p className="mb-2">

@@ -152,7 +152,7 @@ export default function PrivacyPolicyPage() {
                         <h3 className="text-xl font-bold text-foreground mb-3 mt-6">Opt-In Instructions</h3>
                         <p className="mb-4">
                             You may opt in by providing your mobile number and explicitly agreeing to receive SMS messages
-                            through our website forms, email, SMS, phone calls, contracts, third-party platforms. Simply
+                            through our website forms, email, SMS, contracts, third-party platforms. Simply
                             providing your phone number does not constitute consent.
                         </p>
                         <p className="mb-2">
